@@ -16,7 +16,7 @@
 		"instagram": "INSTAGRAM",
 		"linkedin": "LINKEDIN",
 		"behance": "BEHANCE",
-		"copy": "2026 ©SILOARQUITECTES"
+		"copy": "©SILOARQUITECTES"
 	},
 	"Architecture": {
 		"ernestina": {
@@ -35,7 +35,7 @@
 			"team": "Silo Arquitectes + Pantano Arquitectura + SMA + MADI Arq",
 			"project_type": "International Competition, High School",
 			"client": "Ministry of Spatial Planning, Urbanism and State Property",
-			"description": "The project stems from a reflection on teaching-learning processes, based on the understanding that space must function as a 'third teacher.' It proposes overcoming traditional hierarchies by conceiving the building as a living ecosystem: capable of teaching, supporting, and transforming in harmony with new paradigms and the constant evolution of its inhabitants. The school is designed as a mediator between the city and the Tološka forest (Tološka šuma), integrating the natural landscape into educational processes and orienting activities toward it. The site features sports facilities and an extension of the forest as a learning area, fostering a direct relationship with nature and promoting outdoor teaching and social experiences, while simultaneously serving as a public space open to the community. The modular grid enables a flexible and non-hierarchical layout, allowing learning areas to expand and encouraging collaboration between departments. Architecture and nature integrate to strengthen identity, well-being, and community. It is an architecture that teaches through flexibility, connection, and change—where to learn is to inhabit, and to inhabit is to transform."
+			"description": "The project stems from a reflection on teaching-learning processes, based on the understanding that space must function as a 'third teacher.' It proposes overcoming traditional hierarchies by conceiving the building as a living ecosystem: capable of teaching, supporting, and transforming in harmony with new paradigms and the constant evolution of its inhabitants. \n The school is designed as a mediator between the city and the Tološka forest (Tološka šuma), integrating the natural landscape into educational processes and orienting activities toward it. The site features sports facilities and an extension of the forest as a learning area, fostering a direct relationship with nature and promoting outdoor teaching and social experiences, while simultaneously serving as a public space open to the community. \n The modular grid enables a flexible and non-hierarchical layout, allowing learning areas to expand and encouraging collaboration between departments. Architecture and nature integrate to strengthen identity, well-being, and community. It is an architecture that teaches through flexibility, connection, and change—where to learn is to inhabit, and to inhabit is to transform."
 		},
 		"governament_SF": {
 			"name": "Municipal Government Headquarters of the City of San Francisco",
@@ -44,7 +44,7 @@
 			"team": "Silo Arquitectes + Arco Arquitectura + SMA + Monje Rocio",
 			"project_type": "National ideas competition, public institution",
 			"client": "Municipality of San Francisco",
-			"description": "The project for the new public management building in San Francisco arises from a fundamental premise: architecture as social infrastructure. The design is based on integration into the urban fabric by extending the pre-existing green corridor into the plot. This operation creates a lateral public plaza that acts as a civic buffer, enhancing the urban space and mitigating the region's harsh climate through permeable surfaces and native vegetation. The proposal is formalized through a progressive stepping that mediates between the institutional and neighborhood scales. This gesture allows for the creation of a system of elevated green terraces, which function not only as an expansion of the workspace but also as thermal and acoustic buffers. The heart of the building is a central articulating void—a bioclimatic lung that guarantees deep natural lighting and activates ventilation via the stack effect in summer and thermal accumulation in winter, symbolizing the transparency values of contemporary public management. The program is organized in a vertical gradient of privacy: a permeable and open ground floor for citizen services, middle levels for technical administration, and an upper stratum for executive functions. Perimeter circulation clears the floor plans, ensuring flexibility and unobstructed views of the surroundings. In terms of construction, the building utilizes a reinforced concrete structure with deep foundations adapted to local loess soils. The use of suspended cantilevers via tension rods allows for a ground floor free of obstacles. The materiality is completed with passive solar control devices—eaves and tensioned fabrics—ensuring energy efficiency, durability, and low maintenance costs, thus consolidating a responsible, habitable building fully integrated into its community."
+			"description": "The project for the new public management building in San Francisco arises from a fundamental premise: architecture as social infrastructure. The design is based on integration into the urban fabric by extending the pre-existing green corridor into the plot. This operation creates a lateral public plaza that acts as a civic buffer, enhancing the urban space and mitigating the region's harsh climate through permeable surfaces and native vegetation.\n The proposal is formalized through a progressive stepping that mediates between the institutional and neighborhood scales. This gesture allows for the creation of a system of elevated green terraces, which function not only as an expansion of the workspace but also as thermal and acoustic buffers. The heart of the building is a central articulating void—a bioclimatic lung that guarantees deep natural lighting and activates ventilation via the stack effect in summer and thermal accumulation in winter, symbolizing the transparency values of contemporary public management.\n The program is organized in a vertical gradient of privacy: a permeable and open ground floor for citizen services, middle levels for technical administration, and an upper stratum for executive functions. Perimeter circulation clears the floor plans, ensuring flexibility and unobstructed views of the surroundings.\n In terms of construction, the building utilizes a reinforced concrete structure with deep foundations adapted to local loess soils. The use of suspended cantilevers via tension rods allows for a ground floor free of obstacles. The materiality is completed with passive solar control devices—eaves and tensioned fabrics—ensuring energy efficiency, durability, and low maintenance costs, thus consolidating a responsible, habitable building fully integrated into its community."
 		},
 		"economic_sciences_SL": {
 			"name": "Professional Council of Economic Sciences of San Luis Building",
@@ -53,72 +53,79 @@
 			"team": "Silo Arquitectes + Pantano Arquitectura + MADI Arq",
 			"project_type": "National competition, institutional building",
 			"client": "C.P.C.E. (Professional Council of Economic Sciences of San Luis Province)",
-			"description": "The urban and architectural proposal is structured around an 'urban promenade' (rambla) that consolidates a new public front, articulating the landscape and pedestrian pathways with the CPCE multipurpose building. The intervention seeks to boost the development of Merlo through an integration strategy, where a transverse esplanade acts as a multipurpose space and a visual focal point toward the mountains (sierras), linking the urban context with a sustainable, inclusive, and hierarchical mobility system. Architecturally, the building is defined by a longitudinal pavilion typology with a North-South orientation, optimizing thermal comfort and passive efficiency. The structure is realized through modular steel portal frames that create a versatile 35x15 meter container, capable of adapting to future uses. The design incorporates perimeter galleries inspired by rural architecture, functioning as spaces for climatic and social transition that connect the interior with the civic esplanade. The landscaping project prioritizes environmental regeneration through the conservation of the native forest and the protection of the existing wetland, integrating educational trails and indigenous species. The green infrastructure is designed to create microclimates, manage rainwater via permeable surfaces, and define recreational and sports areas."
+			"description": "The urban and architectural proposal is structured around an 'urban promenade' (rambla) that consolidates a new public front, articulating the landscape and pedestrian pathways with the CPCE multipurpose building. The intervention seeks to boost the development of Merlo through an integration strategy, where a transverse esplanade acts as a multipurpose space and a visual focal point toward the mountains (sierras), linking the urban context with a sustainable, inclusive, and hierarchical mobility system.\n Architecturally, the building is defined by a longitudinal pavilion typology with a North-South orientation, optimizing thermal comfort and passive efficiency. The structure is realized through modular steel portal frames that create a versatile 35x15 meter container, capable of adapting to future uses. The design incorporates perimeter galleries inspired by rural architecture, functioning as spaces for climatic and social transition that connect the interior with the civic esplanade.\n The landscaping project prioritizes environmental regeneration through the conservation of the native forest and the protection of the existing wetland, integrating educational trails and indigenous species. The green infrastructure is designed to create microclimates, manage rainwater via permeable surfaces, and define recreational and sports areas."
 		},
-		"campo_macarena": {
+		"campo_la_macarena": {
 			"name": "“Campo La Macarena” Sports Area",
 			"year": "2024",
 			"location": "Córdoba, Argentina",
 			"team": "Silo Arquitectes + Pantano Arquitectura + Panichelli Renzo + Teseyra Camila + Rojo Martina",
 			"project_type": "National competition for sports area preliminary designs",
 			"client": "“Campo La Macarena,” Rio Cuarto Golf Club",
-			"description": "The proposal for the Campo 'La Macarena' Sports Area stands as a contemporary response to the need for kinder, more sustainable, and inclusive cities in a post-pandemic context. Located in Río Cuarto, the project seeks not only to expand the club's facilities but also to transform the site into a driver for social coexistence, balancing the historical identity of the land with the demands of the surrounding new urban fabric. The design is structured around a clear and efficient design trilogy: Urban Front: A strategic piece that consolidates the boundary with the ongoing real estate development, providing the complex with a prestigious and innovative institutional image. The Rambla (Promenade): An organic axis that penetrates the site as a 'green walkway.' This central connector serves as the geographical heart of the project, balancing distances to the golf course and organizing pedestrian flow holistically. The Grid (Checkerboard): A programmatic layout oriented strictly North-South. This decision ensures optimal performance for the 10 tennis courts, 6 padel courts, squash courts, and the semi-Olympic pool, guaranteeing thermal and visual comfort for athletes relative to the sun's path. Bioclimatic Landscape: The architecture merges with the landscape through a 'comb-like' arrangement branching from the promenade. The landscaping strategy is based on a tree mass of varying density and color that creates specific microclimates and shelters each pathway. At the center of the polygon, a large 'green amoeba' acts as an articulating node, using grasses and low-growth vegetation to foster local biodiversity. In this way, the project synthesizes functionality and tradition through rational geometry and a fluid sensory experience (the promenade), establishing 'La Macarena' as a benchmark for sports infrastructure and urban sustainability."
+			"description": "The proposal for the Campo 'La Macarena' Sports Area stands as a contemporary response to the need for kinder, more sustainable, and inclusive cities in a post-pandemic context. Located in Río Cuarto, the project seeks not only to expand the club's facilities but also to transform the site into a driver for social coexistence, balancing the historical identity of the land with the demands of the surrounding new urban fabric.\n The design is structured around a clear and efficient design trilogy:\n Urban Front: A strategic piece that consolidates the boundary with the ongoing real estate development, providing the complex with a prestigious and innovative institutional image.\n The Rambla (Promenade): An organic axis that penetrates the site as a 'green walkway.' This central connector serves as the geographical heart of the project, balancing distances to the golf course and organizing pedestrian flow holistically.\n The Grid (Checkerboard): A programmatic layout oriented strictly North-South. This decision ensures optimal performance for the 10 tennis courts, 6 padel courts, squash courts, and the semi-Olympic pool, guaranteeing thermal and visual comfort for athletes relative to the sun's path.\n Bioclimatic Landscape: The architecture merges with the landscape through a 'comb-like' arrangement branching from the promenade. The landscaping strategy is based on a tree mass of varying density and color that creates specific microclimates and shelters each pathway. At the center of the polygon, a large 'green amoeba' acts as an articulating node, using grasses and low-growth vegetation to foster local biodiversity. In this way, the project synthesizes functionality and tradition through rational geometry and a fluid sensory experience (the promenade), establishing 'La Macarena' as a benchmark for sports infrastructure and urban sustainability."
 		},
-		"weeping_tlaloc": {
-			"name": "“The Weeping of Tlaloc” (El llanto de Tláloc)",
+		"llanto_tlaloc": {
+			"name": "“The Weeping of Tlaloc”",
 			"year": "2023",
 			"location": "Mexico City, Mexico",
 			"team": "Silo Arquitectes + Pantano Arquitectura + Luquet Arquitectura + Panichelli Renzo",
 			"project_type": "International competition, ephemeral pavilion",
 			"client": "Arquine",
-			"description": "A pavilion that invites reflection on the relationship between humanity and nature. The project is materialized through a rented scaffolding system, whose pyramidal structure gives shape to a textile skin made of recycled plastic. Inside, a thin film of water covers the floor, inviting the contemplation of light and space. The siting traces a historical urban canal, establishing a dialogue with Diego Rivera’s mural, 'Dream of a Sunday Afternoon in the Alameda Central.' Through a playful and sensory experience, the role of water is reinterpreted as an essential resource inherent to human existence. The atmosphere creates a resonance with the ancient god Tlaloc and pre-Columbian architecture."
+			"description": "A pavilion that invites reflection on the relationship between humanity and nature.\n The project is materialized through a rented scaffolding system, whose pyramidal structure gives shape to a textile skin made of recycled plastic. Inside, a thin film of water covers the floor, inviting the contemplation of light and space.\n The siting traces a historical urban canal, establishing a dialogue with Diego Rivera’s mural, 'Dream of a Sunday Afternoon in the Alameda Central.'\n Through a playful and sensory experience, the role of water is reinterpreted as an essential resource inherent to human existence. The atmosphere creates a resonance with the ancient god Tlaloc and pre-Columbian architecture."
 		}
 	},
 	"Visualization": {
 		"selected": [
-			{
+			{ "id": 1,
 				"name": "New Classroom Building in Logroño, University of La Rioja",
 				"year": "2026",
 				"location": "Logroño, Spain",
 				"client": "PINEARQ"
 			},
 			{
+				"id": 2,
 				"name": "Second Secondary School of Podgorica, Montenegro",
 				"year": "2025",
 				"location": "Podgorica, Montenegro",
 				"client": "Silo arquitectes, Pantano Arquitectura, Madi arq, SMA"
 			},
 			{
+				"id" : 3,
 				"name": "Building for Research in the field of Health Sciences",
 				"year": "2025",
 				"location": "Barcelona, Spain",
 				"client": "PINEARQ"
 			},
 			{
+				"id": 4,
 				"name": "Housing Conci",
 				"year": "2025",
 				"location": "Cordoba, Argentina",
 				"client": "3164.Estudio"
 			},
 			{
+				"id": 5,
 				"name": "“La Paz” Events Hall",
 				"year": "2023",
 				"location": "Cordoba, Argentina",
 				"client": "Alarcia Ferrer, Ignacio de Biasi"
 			},
 			{
+				"id": 6,
 				"name": "BS House",
 				"year": "2024",
 				"location": "Cordoba, Argentina",
 				"client": "3164.Estudio"
 			},
 			{
+				"id": 7,
 				"name": "Sum House",
 				"year": "2024",
 				"location": "Cordoba, Argentina",
 				"client": "Lucrecia Frias"
 			},
 			{
+				"id": 8,
 				"name": "Escondida House",
 				"year": "2023",
 				"location": "Cordoba, Argentina",
@@ -127,108 +134,128 @@
 		],
 		"archive": [
 			{
+				"id": 1,
 				"name": "Commercial Promenade",
 				"year": "2023",
 				"client": "3164.Estudio"
 			},
 			{
+				"id": 2,
 				"name": "Tlaloc's Cry",
 				"year": "2023",
 				"client": "Silo Arquitectes, Pantano Arquitectura, Luquet Arquitectura, Panichelli Renzo"
 			},
-			{ "name": "Shido", "year": "2023", "client": "3164.Estudio" },
-			{ "name": "Roca House", "year": "2023", "client": "SDF Arquitectos" },
-			{ "name": "TPD House", "year": "2023", "client": "Lucrecia Frias" },
-			{ "name": "QJ House", "year": "2023", "client": "Lucrecia Frias" },
+			{ "id": 3, "name": "Shido", "year": "2023", "client": "3164.Estudio" },
+			{ "id": 4, "name": "Roca House", "year": "2023", "client": "SDF Arquitectos" },
+			{ "id": 5, "name": "TPD House", "year": "2023", "client": "Lucrecia Frias" },
+			{ "id": 6, "name": "QJ House", "year": "2023", "client": "Lucrecia Frias" },
 			{
+				"id": 7,
 				"name": "Postgraduate – Specialization in Landscape Planning and Design",
 				"year": "2023",
 				"client": "Anc.Arquitectura"
 			},
 			{
+				"id": 8,
 				"name": "”MAVEC”",
 				"year": "2023",
 				"client": "Agostina Allende, Valentina Astini, Gabriele d’Amato, Francesca Apolito, Octavio Lopez"
 			},
 			{
+				"id": 9,
 				"name": "Instability",
 				"year": "2023",
 				"client": "Silo Arquitectes, Luquet Arquitectura"
 			},
-			{ "name": "Master's Thesis", "year": "2024", "client": "Gorka Martinez" },
+			{ "id": 10, "name": "Master's Thesis", "year": "2024", "client": "Gorka Martinez" },
 			{
+				"id": 11,
 				"name": "Modular House",
 				"year": "2024",
 				"client": "Pantano Arquitectura, Panichelli Renzo, Rojo Martina, Sofia Pantano"
 			},
-			{ "name": "Master's Thesis", "year": "2024", "client": "Iñigo Unceta" },
+			{ "id": 12, "name": "Master's Thesis", "year": "2024", "client": "Iñigo Unceta" },
 			{
+				"id": 13,
 				"name": "Furniture and Cafeteria Study, LCI Barcelona",
 				"year": "2024",
 				"client": "Circular Studio"
 			},
 			{
+				"id": 14,
 				"name": "“Campo La Macarena” Sports Area, Rio Cuarto Golf Club",
 				"year": "2024",
 				"client": "Silo Arquitectes, Pantano Arquitectura, Panichelli Renzo"
 			},
 			{
+				"id": 15,
 				"name": "Calzavara Multi-function Antenna",
 				"year": "2024",
 				"client": "Wuilleumier Francisco, Ludueña Andres, Octavio Lopez"
 			},
 			{
+				"id": 16,
 				"name": "The Cloister",
 				"year": "2025",
 				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
 			},
 			{
+				"id": 17,
 				"name": "Bus Maintenance Workshop in Barcelona",
 				"year": "2025",
 				"client": "Acto Studio"
 			},
 			{
+				"id": 18,
 				"name": "Center for Applied Neuroscience, Mundet Campus",
 				"year": "2025",
 				"client": "PINE ARQ"
 			},
 			{
+				"id": 19,
 				"name": "Eden’s Garden",
 				"year": "2025",
 				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
 			},
 			{
+				"id": 20,
 				"name": "Single-Family Home Interior",
 				"year": "2025",
 				"client": "eLe Studio"
 			},
 			{
+				"id": 21,
 				"name": "Professional Council of Economic Sciences San Luis",
 				"year": "2025",
 				"client": "Silo Arquitectes, Pantano Arquitectura, Madi Arq"
 			},
 			{
+				"id": 22,
 				"name": "Gaiman Housing",
 				"year": "2025",
 				"client": "Pantano Arquitectura"
 			},
-			{ "name": "Abud House", "year": "2025", "client": "German Jimenez" },
+			{ "id": 23, "name": "Abud House", "year": "2025", "client": "German Jimenez" },
 			{
+				"id": 24,
 				"name": "Seregno Innovation Hub",
 				"year": "2025",
 				"client": "Wuilleumier Francisco"
 			},
 			{
+				"id": 25,
 				"name": "Municipal Government Headquarters of the City of San Francisco",
 				"year": "2025",
 				"client": "Silo arquitectes, SMA, Arco Estudio, Rocio Monje"
 			},
 			{
+				"id": 26,
 				"name": "Seregno Innovation Hub",
 				"year": "2025",
 				"client": "Wuilleumier Francisco"
 			},
 			{
+				"id": 27,
 				"name": "Urban Reflections",
 				"year": "2026",
 				"client": "Silo arquitectes, SMA, Madi Arq, Santiago Espeche"

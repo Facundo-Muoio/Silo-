@@ -10,7 +10,7 @@ type TNavBar = { children: ReactElement };
 export default function Navbar({ children }: TNavBar) {
 	const logo = useTranslations("Logo");
 	const text = useTranslations("Navbar");
-	const pathName = usePathname();
+	const pathName = "/" + usePathname().split("/")[1];
 
 	const isActive = (href: string) => pathName === href;
 
@@ -28,7 +28,7 @@ export default function Navbar({ children }: TNavBar) {
 
 	return (
 		<>
-			<div className="navbar flex flex-row justify-between w-full p-6 items-center relative top-0 right-0 left-0">
+			<div className="navbar flex flex-row justify-between w-full p-10 items-center relative top-0 right-0 left-0">
 				<h2 className="text-[22px]">{logo("title")}</h2>
 				<ul className="hidden md:flex gap-4 xl:text-[18px]">
 					{navLinks.map(({ name, href }) => (
