@@ -79,7 +79,7 @@ export default function InfoProject({ nameProject }: InfoProjectProps) {
 			<div>
 				{p.map((paragraph, idx) => (
 					<p
-						className="mb-6 animate-slide-in-left"
+						className="mb-6 animate-slide-in-left text-justify"
 						key={idx}
 						style={{ animationDelay: `${(h3Count + idx) * staggerStepMs}ms` }}
 					>

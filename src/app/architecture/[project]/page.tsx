@@ -2,6 +2,7 @@ import Slider from "../../components/ui/Slider/Slider";
 import { architecture } from "../../../Projects_data/Architecture";
 import InfoProject from "../../components/ui/InfoProject/InfoProject";
 import { cookies } from "next/headers";
+import SecondaryFooter from "../../components/ui/SecondaryFooter/SecondaryFooter";
 
 export default async function page({
 	params,
@@ -16,16 +17,15 @@ export default async function page({
 	}>;
 }) {
 	const cookieStore = await cookies();
-	const lenguage = cookieStore.get("silo_lenguage")?.value || "en";
+	const lenguage = (cookieStore.get("silo_lenguage")?.value || "en") as
+		| "en"
+		| "es";
 	const { project: projectName } = await params;
 	const arrayImages = architecture[projectName];
-	const date = new Date();
-	const year = date.getFullYear();
-	const copyText = lenguage === "en" ? "©SILOARQUITECTES" : "©SILOARQUITECTES";
 
 	return (
 		<>
-			<div className="grid grid-cols-[40%_60%] gap-8 w-full p-10">
+			<div className="grid grid-cols-[40%_60%] gap-8 w-full px-10 py-5">
 				<InfoProject nameProject={projectName} />
 				<Slider
 					slides={arrayImages}
@@ -34,7 +34,7 @@ export default async function page({
 					showDots={false}
 				/>
 			</div>
-			<div className="flex justify-end p-10 text-lg">{`${year} ${copyText}`}</div>
+			<SecondaryFooter lenguage={lenguage} />
 		</>
 	);
 }

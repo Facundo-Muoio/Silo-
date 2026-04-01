@@ -10,7 +10,6 @@ export function useSlider({
 	pauseOnHover = true,
 	loop = true,
 	initialIndex = 0,
-	onSlideChange,
 }: Omit<SliderProps, "className" | "showArrows" | "showDots">) {
 	const [current, setCurrent] = useState(initialIndex);
 	const [isPaused, setIsPaused] = useState(false);
@@ -49,6 +48,7 @@ export function useSlider({
 
 	return {
 		current,
+		setCurrent,
 		total,
 		next,
 		prev,

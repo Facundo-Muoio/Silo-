@@ -1,9 +1,9 @@
-import { cookies } from "next/headers";
+"use client";
 import { toggleLenguageAction } from "@/src/app/actions/lenguage";
+import { useLenguage } from "@/src/app/contexts/LenguageProvider";
 
-export default async function LenguageButton() {
-	const cookieStore = await cookies();
-	const currentLanguage = cookieStore.get("silo_lenguage")?.value || "en";
+export default function LenguageButton() {
+	const currentLanguage = useLenguage();
 	return (
 		<button className="cursor-pointer w-fit" onClick={toggleLenguageAction}>
 			<span

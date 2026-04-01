@@ -1,3 +1,4 @@
+"use client";
 import { useMounted } from "@/src/app/hooks/useMounted";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,7 @@ type TyThumbnail = {
 	index: number;
 	onlySeeName?: boolean;
 	hoverEffect?: "darken" | "lighten";
+	parentFolder?: string;
 };
 
 export default function Thumbnail({
@@ -22,6 +24,7 @@ export default function Thumbnail({
 	index,
 	onlySeeName = false,
 	hoverEffect = "darken",
+	parentFolder = "/architecture/",
 }: TyThumbnail) {
 	const mounted = useMounted();
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
@@ -34,7 +37,7 @@ export default function Thumbnail({
 
 	return (
 		<Link
-			href={`/architecture/${href}`}
+			href={`${parentFolder}${href}`}
 			className={`thumbnail group relative max-w-[100%] w-full ${animate} aspect-square ${isEven && "place-self-end"} cursor-pointer`}
 			style={{ animationDelay: `${0.15 + index * 0.08}s` }}
 		>

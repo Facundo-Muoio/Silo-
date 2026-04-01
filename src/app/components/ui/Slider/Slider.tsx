@@ -36,7 +36,7 @@ export default function Slider({
 	className,
 	onSlideChange,
 }: SliderProps) {
-	const { current, next, pause, prev, resume, total } = useSlider({
+	const { current, setCurrent, next, pause, prev, resume, total } = useSlider({
 		slides,
 		autoPlay,
 		interval,
@@ -89,6 +89,7 @@ export default function Slider({
 							<Image
 								src={slide.src}
 								alt={slide.alt}
+								sizes="min-w-full"
 								fill
 								className="object-cover"
 								onMouseEnter={pause}
@@ -118,7 +119,7 @@ export default function Slider({
 								role="tab"
 								aria-selected={index === current}
 								aria-label={`Go to slide ${index + 1}`}
-								onClick={() => console.log("go to index")}
+								onClick={() => setCurrent(index)}
 								className={`h-2 rounded-full transition-all ${index === current ? "w-5 bg-white" : "w-2 bg-white/50 hover:bg-white/80"}`}
 							></button>
 						))}

@@ -76,7 +76,8 @@
 	},
 	"Visualization": {
 		"selected": [
-			{ "id": 1,
+			{
+				"id": 1,
 				"name": "New Classroom Building in Logroño, University of La Rioja",
 				"year": "2026",
 				"location": "Logroño, Spain",
@@ -90,7 +91,7 @@
 				"client": "Silo arquitectes, Pantano Arquitectura, Madi arq, SMA"
 			},
 			{
-				"id" : 3,
+				"id": 3,
 				"name": "Building for Research in the field of Health Sciences",
 				"year": "2025",
 				"location": "Barcelona, Spain",
@@ -146,9 +147,24 @@
 				"client": "Silo Arquitectes, Pantano Arquitectura, Luquet Arquitectura, Panichelli Renzo"
 			},
 			{ "id": 3, "name": "Shido", "year": "2023", "client": "3164.Estudio" },
-			{ "id": 4, "name": "Roca House", "year": "2023", "client": "SDF Arquitectos" },
-			{ "id": 5, "name": "TPD House", "year": "2023", "client": "Lucrecia Frias" },
-			{ "id": 6, "name": "QJ House", "year": "2023", "client": "Lucrecia Frias" },
+			{
+				"id": 4,
+				"name": "Roca House",
+				"year": "2023",
+				"client": "SDF Arquitectos"
+			},
+			{
+				"id": 5,
+				"name": "TPD House",
+				"year": "2023",
+				"client": "Lucrecia Frias"
+			},
+			{
+				"id": 6,
+				"name": "QJ House",
+				"year": "2023",
+				"client": "Lucrecia Frias"
+			},
 			{
 				"id": 7,
 				"name": "Postgraduate – Specialization in Landscape Planning and Design",
@@ -167,14 +183,24 @@
 				"year": "2023",
 				"client": "Silo Arquitectes, Luquet Arquitectura"
 			},
-			{ "id": 10, "name": "Master's Thesis", "year": "2024", "client": "Gorka Martinez" },
+			{
+				"id": 10,
+				"name": "Master's Thesis",
+				"year": "2024",
+				"client": "Gorka Martinez"
+			},
 			{
 				"id": 11,
 				"name": "Modular House",
 				"year": "2024",
 				"client": "Pantano Arquitectura, Panichelli Renzo, Rojo Martina, Sofia Pantano"
 			},
-			{ "id": 12, "name": "Master's Thesis", "year": "2024", "client": "Iñigo Unceta" },
+			{
+				"id": 12,
+				"name": "Master's Thesis",
+				"year": "2024",
+				"client": "Iñigo Unceta"
+			},
 			{
 				"id": 13,
 				"name": "Furniture and Cafeteria Study, LCI Barcelona",
@@ -235,7 +261,12 @@
 				"year": "2025",
 				"client": "Pantano Arquitectura"
 			},
-			{ "id": 23, "name": "Abud House", "year": "2025", "client": "German Jimenez" },
+			{
+				"id": 23,
+				"name": "Abud House",
+				"year": "2025",
+				"client": "German Jimenez"
+			},
 			{
 				"id": 24,
 				"name": "Seregno Innovation Hub",
@@ -263,12 +294,12 @@
 		]
 	},
 	"Atelier": {
-		"manifest": "Silo is a response to the duality of the architectural phenomenon. The Atelier, conceived as a space for thought and production, deploys its practice through two autonomous yet complementary branches: the solidity of matter and the fluidity of the idea. Silo Arquitectes, the studio bases its identity on the temporal nature of architecture, understanding that uses may change over time and that meanings are always contingent; an architecture in constant mutation. Silo Arquitectes stands out for its wide scope of action, ranging from theoretical research to material practice, with an absolute commitment to consistency and quality throughout every stage of the project. Silo Viz arises from the need to convey the immaterial narratives of architecture. We are driven by the conviction that every work has a story to tell, capable of evoking emotions and transporting the viewer to a realm where imagination becomes a palpable reality. Here, we fuse the technical with the artistic and the pragmatic with the sublime, under the rigor of architectural visualization. The Atelier manages each project through an integral and interdisciplinary approach that links craft, art, culture, and social commitment. Under the direction of Giuliano Scigliano and Octavio López, Silo explores new ways of inhabiting and thinking about space, operating with a global vision on both a national and international scale."
+		"manifest": "<bold>Silo</bold> is a response to the duality of the architectural phenomenon. The <bold>Atelier</bold>, conceived as a space for thought and production, deploys its practice through two autonomous yet complementary branches: <bold>the solidity of matter and the fluidity of the idea.</bold><break></break><break></break><bold>Silo Arquitectes</bold>, the studio bases its identity on the temporal nature of architecture, understanding that uses may change over time and that meanings are always contingent; an architecture in constant mutation. Silo Arquitectes stands out for its wide scope of action, ranging from theoretical research to material practice, with an absolute commitment to consistency and quality throughout every stage of the project.<break></break><break></break><bold>Silo Viz</bold> arises from the need to convey the immaterial narratives of architecture. We are driven by the conviction that every work has a story to tell, capable of evoking emotions and transporting the viewer to a realm where imagination becomes a palpable reality. Here, we fuse the technical with the artistic and the pragmatic with the sublime, under the rigor of architectural visualization.<break></break><break></break>The Atelier manages each project through an integral and interdisciplinary approach that links <bold>craft, art, culture, and social commitment.</bold> Under the direction of <bold>Giuliano Scigliano</bold> and <bold>Octavio López</bold>, Silo explores new ways of inhabiting and thinking about space, operating with a global vision on both a national and international scale."
 	},
 	"Contact": {
 		"gmail": "Siloarchviz@gmail.com",
-		"linkedin": "",
+		"linkedin": "Linkedin",
 		"instagram": ["Arq_Instagram", "Viz_Instagram"],
-		"behance": ""
+		"behance": "Behance"
 	}
 }
