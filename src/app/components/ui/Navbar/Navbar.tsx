@@ -3,7 +3,10 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { ReactElement } from "react";
-import { useState } from "react";
+import {
+	NavbarContextProvider,
+	useNavbar,
+} from "@/src/app/contexts/NavbarProvider";
 
 type TNavBar = { children: ReactElement };
 
@@ -14,7 +17,7 @@ export default function Navbar({ children }: TNavBar) {
 
 	const isActive = (href: string) => pathName === href;
 
-	const [isOpen, setIsOpen] = useState(false);
+	const { isOpen, setIsOpen } = useNavbar() as NavbarContextProvider;
 
 	const navLinks = [
 		{ name: "architecture", href: "/architecture" },
@@ -30,7 +33,7 @@ export default function Navbar({ children }: TNavBar) {
 		<>
 			<div className="navbar flex flex-row justify-between w-full p-10 items-center relative top-0 right-0 left-0">
 				<h2 className="text-[22px]">{logo("title")}</h2>
-				<ul className="hidden md:flex gap-4 xl:text-[18px]">
+				<ul className="hidden lg:flex gap-4 lg:text-lg">
 					{navLinks.map(({ name, href }) => (
 						<Link
 							key={name}
@@ -43,7 +46,7 @@ export default function Navbar({ children }: TNavBar) {
 					{children}
 				</ul>
 				<button
-					className="w-[30px] h-[30px] p-1 md:hidden flex flex-col justify-around focus:outline-none focus:ring-1"
+					className="w-[30px] h-[30px] p-1 lg:hidden flex flex-col justify-around focus:outline-none focus:ring-1"
 					onClick={() => setIsOpen(!isOpen)}
 					aria-expanded={isOpen}
 				>
@@ -61,10 +64,10 @@ export default function Navbar({ children }: TNavBar) {
 				</button>
 			</div>
 			<ul
-				className={`w-full text-[20px] flex flex-col gap-4 p-6 absolute md:hidden overflow-hidden border-x-0 border-black bg-white z-10 ${
+				className={`w-full text-[20px] flex flex-col gap-4 p-6 absolute lg:hidden overflow-hidden border-x-0 border-black bg-white z-10 ${
 					isOpen
 						? "h-[65dvh] opacity-100 border-y-1"
-						: "h-0 opacity-0  border-y-0"
+						: "h-0 p-0 opacity-0 border-y-0"
 				}`}
 				style={{
 					transition: isOpen
@@ -76,6 +79,7 @@ export default function Navbar({ children }: TNavBar) {
 					<Link
 						key={name}
 						href={href}
+						onClick={() => setIsOpen(false)}
 						className={`transition-all duration-500 ease-out ${
 							isActive(href) ? "font-bold" : ""
 						} ${

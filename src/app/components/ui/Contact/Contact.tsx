@@ -16,20 +16,14 @@ export default function Contact() {
 	return (
 		<>
 			<div
-				className={`container_logo w-full px-10 pb-10 flex justify-center items-center  ${animate}`}
+				className={`relative max-w-[225px] lg:max-w-[225px] aspect-square container_logo mx-auto px-10 pb-5 lg:pb-10 ${animate}`}
 				style={{ animationDelay: "0.1s" }}
 			>
-				<Image
-					src="/images/Logo.webp"
-					width={300}
-					height={300}
-					sizes="300px"
-					alt="logo de silo"
-				/>
+				<Image src="/images/Logo.webp" fill sizes="300px" alt="logo de silo" />
 			</div>
 
 			<div
-				className={`container_email w-full p-10 flex justify-center text-lg  ${animate}`}
+				className={`container_email w-full mt-5 lg:mt-10 flex justify-center text-sm lg:text-lg  ${animate}`}
 				style={{ animationDelay: "0.3s" }}
 			>
 				<a
@@ -41,10 +35,10 @@ export default function Contact() {
 			</div>
 
 			<div
-				className={`container_social_medias flex justify-between items-end p-10 w-full fixed bottom-20  ${animate}`}
+				className={`container_social_medias text-sm flex-wrap  justify-center lg:flex-nowrap lg:text-lg flex lg:justify-between items-end p-10 w-full gap-4 lg:gap-8 lg:fixed bottom-10 ${animate}`}
 				style={{ animationDelay: "0.5s" }}
 			>
-				<div className="container_linkedin text-lg">
+				<div className="container_linkedin">
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
 						href="https://www.linkedin.com/"
@@ -55,7 +49,7 @@ export default function Contact() {
 					</a>
 				</div>
 
-				<div className="container_instagrams flex gap-8 text-lg">
+				<div className="container_instagrams flex gap-4 lg:gap-8">
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
 						href="https://www.instagram.com/"
@@ -74,7 +68,7 @@ export default function Contact() {
 					</a>
 				</div>
 
-				<div className="container_behance text-lg">
+				<div className="container_behance">
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
 						href="https://www.behance.net/"

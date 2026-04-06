@@ -6,6 +6,7 @@ import Navbar from "./components/ui/Navbar/Navbar";
 import LenguageButton from "./components/ui/LenguageButton/LenguageButton";
 import { cookies } from "next/headers";
 import { LenguageProvider } from "./contexts/LenguageProvider";
+import NavbarProvider from "./contexts/NavbarProvider";
 
 const spaceMono = Space_Mono({
 	variable: "--font-space-mono",
@@ -44,10 +45,12 @@ export default async function RootLayout({
 				{
 					<LenguageProvider value={lenguage}>
 						<NextIntlClientProvider>
-							<Navbar>
-								<LenguageButton />
-							</Navbar>
-							{children}
+							<NavbarProvider>
+								<Navbar>
+									<LenguageButton />
+								</Navbar>
+								{children}
+							</NavbarProvider>
 						</NextIntlClientProvider>
 					</LenguageProvider>
 				}

@@ -11,7 +11,7 @@ export default async function page() {
 	return (
 		<>
 			<Atelier />
-			<SecondaryFooter lenguage={lenguage} className="absolute bottom-0" />
+			<SecondaryFooter lenguage={lenguage} />
 		</>
 	);
 }

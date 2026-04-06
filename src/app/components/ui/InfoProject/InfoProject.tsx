@@ -1,6 +1,7 @@
 "use client";
 import { useLenguage } from "@/src/app/contexts/LenguageProvider";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 type InfoProjectProps = {
 	nameProject:
@@ -9,9 +10,15 @@ type InfoProjectProps = {
 		| "economic_sciences_SL"
 		| "campo_la_macarena"
 		| "llanto_tlaloc";
+	className?: string;
+	children?: React.ReactNode;
 };
 
-export default function InfoProject({ nameProject }: InfoProjectProps) {
+export default function InfoProject({
+	nameProject,
+	className,
+	children,
+}: InfoProjectProps) {
 	const lenguage = useLenguage();
 	const t = useTranslations("Architecture");
 	const p = t(`${nameProject}.description`).split("\n");
@@ -19,7 +26,7 @@ export default function InfoProject({ nameProject }: InfoProjectProps) {
 	const h3Count = 6;
 
 	return (
-		<div className="flex flex-col gap-16">
+		<div className={`flex flex-col gap-16 ${className}`}>
 			<div className="flex gap-4 flex-col">
 				<h3
 					className="animate-slide-in-left"
@@ -76,6 +83,7 @@ export default function InfoProject({ nameProject }: InfoProjectProps) {
 					{t(`${nameProject}.client`)}
 				</h3>
 			</div>
+			{children}
 			<div>
 				{p.map((paragraph, idx) => (
 					<p

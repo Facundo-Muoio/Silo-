@@ -5,7 +5,7 @@ import {
 	VisualizationContextType,
 } from "@/src/app/contexts/VisualizationProvider";
 import Thumbnail from "../Thumbnail/Thumbnail";
-import ArchiveGrid from "../ArchiveGrid/ArchiveGrid";
+import GridArchive from "../GridAchive/GridArchive";
 
 interface selectedItem {
 	id: number;
@@ -22,6 +22,7 @@ const srcsThumbnails = [
 	"/images/visualization/selected/4- Proyecto_  Housing Conci_2.webp",
 	"/images/visualization/selected/5- Proyecto_ Salon de eventos “La Paz”_2.webp",
 	"/images/visualization/selected/6- Proyecto_ Casa BS_2.webp",
+	"",
 	"/images/visualization/selected/8- Proyecto_ Casa Escondida_1.webp",
 ];
 
@@ -29,32 +30,37 @@ export default function VisualizationGallery() {
 	const { state } = useVisualization() as VisualizationContextType;
 	const messages = useMessages();
 	const lengthItems = messages.Visualization.selected.length;
-	const selectedItems = messages.Visualization.selected.slice(
-		0,
-		lengthItems - 1,
-	);
+	const selectedItems = messages.Visualization.selected.slice(0, lengthItems);
+	const width =
+		state === "Seleccionados" || state === "Selected"
+			? "max-w-[1300px]"
+			: "w-full";
 
 	return (
-		<div className="container-visualization w-[80vw] max-w-[1300px] mx-auto">
+		<div className={`container-visualization w-[80vw] ${width} mx-auto`}>
 			{(state === "Selected" || state === "Seleccionados") && (
-				<div className="grid grid-cols-2 gap-24 place-content-between mt-6">
-					{selectedItems.map((project: selectedItem, index: number) => (
-						<Thumbnail
-							href={`selected/${project.id}`}
-							isEven={(index + 1) % 2 === 0}
-							key={project.id}
-							index={index}
-							src={srcsThumbnails[index]}
-							name={project.name}
-							year={Number(project.year)}
-							onlySeeName={true}
-							hoverEffect="lighten"
-							parentFolder="/visualization/"
-						/>
-					))}
+				<div className="grid grid-cols-2 gap-10 md:gap-24 mb-6 place-content-between mt-6">
+					{selectedItems.map((project: selectedItem, index: number) => {
+						if (index + 1 !== 7)
+							return (
+								<Thumbnail
+									href={`selected/${project.id}`}
+									isEven={(index + 1) % 2 === 0}
+									key={project.id}
+									index={index}
+									src={srcsThumbnails[index]}
+									name={project.name}
+									year={Number(project.year)}
+									onlySeeName={true}
+									hoverEffect="lighten"
+									parentFolder="/visualization/"
+								/>
+							);
+						if (index + 1 === 8) return null;
+					})}
 				</div>
 			)}
-			<ArchiveGrid state={state} />
+			{(state === "Archive" || state === "Archivo") && <GridArchive />}
 		</div>
 	);
 }

@@ -2,8 +2,15 @@ import VisualizationGallery from "../components/ui/VisualizationGallery/Visualiz
 import GroupButtons from "../components/ui/GroupButtons/GroupButtons";
 import Button from "../components/ui/GroupButtons/Button/Button";
 import VisualizationProvider from "../contexts/VisualizationProvider";
+import { cookies } from "next/headers";
+import SecondaryFooter from "../components/ui/SecondaryFooter/SecondaryFooter";
 
 export default async function page() {
+	const cookieStore = await cookies();
+	const lenguage = (cookieStore.get("silo_lenguage")?.value || "en") as
+		| "en"
+		| "es";
+
 	return (
 		<VisualizationProvider>
 			<div>
@@ -18,11 +25,12 @@ export default async function page() {
 					<Button
 						href={"/visualization/archive"}
 						labelEn="Archive"
-						labelEs="Archivos"
+						labelEs="Archivo"
 						className="text-lg"
 					/>
 				</GroupButtons>
 				<VisualizationGallery />
+				<SecondaryFooter lenguage={lenguage} />
 			</div>
 		</VisualizationProvider>
 	);

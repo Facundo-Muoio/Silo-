@@ -8,10 +8,11 @@ interface Props {
 export default function SecondaryFooter({ lenguage, className }: Props) {
 	const date = new Date();
 	const year = date.getFullYear();
-	const copyText = lenguage === "en" ? "©SILOARQUITECTES" : "©SILOARQUITECTOS";
+	const copyText =
+		lenguage === "en" ? "©SILOARQUITECTES" : "©SILOARQUITECTOS";
 	return (
 		<div
-			className={`w-full flex justify-end px-10 py-5 text-lg ${className}`}
+			className={`w-full flex justify-end px-10 py-5 text-xs lg:text-base ${className}`}
 		>{`${year} ${copyText}`}</div>
 	);
 }

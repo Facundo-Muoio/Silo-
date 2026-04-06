@@ -22,7 +22,7 @@ export default function Button({ labelEn, labelEs, className }: PropsButton) {
 
 	return (
 		<button
-			className={`cursor-pointer ${boldText} ${className}`}
+			className={`cursor-pointer text-sm md:text-base ${boldText} ${className}`}
 			onClick={handlerClick}
 		>
 			{label}

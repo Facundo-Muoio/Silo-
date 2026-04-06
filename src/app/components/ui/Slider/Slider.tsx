@@ -21,7 +21,10 @@ interface SliderProps {
 	loop?: boolean;
 	initialIndex?: number;
 	className?: string;
-	onSlideChange?: (index: number) => void;
+	classNameContainer?: string;
+	aspectRatio?: string;
+	animationDelay?: string;
+	onSlideChange?: (arg: string) => void;
 }
 
 export default function Slider({
@@ -34,6 +37,9 @@ export default function Slider({
 	loop,
 	initialIndex = 0,
 	className,
+	classNameContainer,
+	aspectRatio,
+	animationDelay = "500ms",
 	onSlideChange,
 }: SliderProps) {
 	const { current, setCurrent, next, pause, prev, resume, total } = useSlider({
@@ -49,99 +55,114 @@ export default function Slider({
 	const mounted = useMounted();
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
 
+	const handlerPrev = () => {
+		if (onSlideChange) {
+			onSlideChange("prev");
+		}
+		prev();
+	};
+
+	const handlerNext = () => {
+		if (onSlideChange) {
+			onSlideChange("next");
+		}
+		next();
+	};
+
 	return (
 		<div
-			className={`container-slider flex gap-12 justify-center items-center ${animate}`}
-			style={{ animationDelay: "500ms" }}
+			className={`container-slider flex gap-12 justify-center items-center ${animate} ${classNameContainer ?? ""}`}
+			style={{ animationDelay: `${animationDelay}` }}
 		>
-			{showArrows && (
-				<button
-					type="button"
-					onClick={prev}
-					aria-label="Previous Slide"
-					disabled={current === 0}
-					className="cursor-pointer disabled:cursor-auto"
-				>
-					<div
-						className={`w-0 h-0 border-y-[8px] border-y-transparent border-r-[12px] ${
-							current === 0 ? "border-r-gray-400" : "border-r-black"
-						}`}
-					></div>
-				</button>
-			)}
-
-			<section
-				className={`relative overflow-hidden ${className ?? ""}`}
-				aria-label="Image Gallery"
-				aria-roledescription="carrusel"
-			>
-				<div
-					className="flex transition-transform duration-500 ease-in-out"
-					style={{ transform: `translateX(-${current * 100}%)` }}
-				>
-					{slides.map((slide, index) => (
+			<div className="relative flex items-center w-full gap-6">
+				{showArrows && (
+					<button
+						type="button"
+						onClick={handlerPrev}
+						aria-label="Previous Slide"
+						disabled={current === 0}
+						className="cursor-pointer disabled:cursor-auto"
+					>
 						<div
-							key={slide.id}
-							className="wrapper relative min-w-full aspect-[4/3]"
-							aria-label={`Slide ${index + 1} de ${total}: ${slide.alt}`}
-							aria-hidden={index == current}
-						>
-							<Image
-								src={slide.src}
-								alt={slide.alt}
-								sizes="min-w-full"
-								fill
-								className="object-cover"
-								onMouseEnter={pause}
-								onMouseLeave={resume}
-							/>
-							{slide.caption && (
-								<p
-									className="absolute bottom-4 left-4 right-4 bg-black/50 text-white text-sm px-3 py-1.5
-                  rounded-lg backdrop-blur-sm"
-								>
-									{slide.caption}
-								</p>
-							)}
-						</div>
-					))}
-				</div>
+							className={`w-0 h-0 border-y-[8px] border-y-transparent border-r-[12px] ${
+								current === 0 ? "border-r-gray-400" : "border-r-black"
+							}`}
+						></div>
+					</button>
+				)}
 
-				{showDots && (
+				<section
+					className={`relative overflow-hidden ${className ?? ""}`}
+					aria-label="Image Gallery"
+					aria-roledescription="carrusel"
+				>
 					<div
-						role="tablist"
-						aria-label="Slides"
-						className="absolute bottom-3 left-0 right-0 flex justify-center gap-2"
+						className="flex transition-transform duration-500 ease-in-out"
+						style={{ transform: `translateX(-${current * 100}%)` }}
 					>
 						{slides.map((slide, index) => (
-							<button
+							<div
 								key={slide.id}
-								role="tab"
-								aria-selected={index === current}
-								aria-label={`Go to slide ${index + 1}`}
-								onClick={() => setCurrent(index)}
-								className={`h-2 rounded-full transition-all ${index === current ? "w-5 bg-white" : "w-2 bg-white/50 hover:bg-white/80"}`}
-							></button>
+								className={`wrapper relative min-w-full landscape:max-md:aspect-[16/9] aspect-[3/4] md:aspect-[4/3] ${aspectRatio && aspectRatio}`}
+								aria-label={`Slide ${index + 1} de ${total}: ${slide.alt}`}
+								aria-hidden={index == current}
+							>
+								<Image
+									src={slide.src}
+									alt={slide.alt}
+									sizes="min-w-full"
+									fill
+									className="object-cover"
+									onMouseEnter={pause}
+									onMouseLeave={resume}
+								/>
+								{slide.caption && (
+									<p
+										className="absolute bottom-4 left-4 right-4 bg-black/50 text-white text-sm px-3 py-1.5
+                  rounded-lg backdrop-blur-sm"
+									>
+										{slide.caption}
+									</p>
+								)}
+							</div>
 						))}
 					</div>
-				)}
-			</section>
 
-			{showArrows && (
-				<button
-					type="button"
-					onClick={next}
-					aria-label="Next Slide"
-					disabled={current === total - 1}
-					className="cursor-pointer disabled:cursor-auto"
-				>
-					<div
-						className={`w-0 h-0 border-y-[8px] border-y-transparent border-l-[12px] ${
-							current === total - 1 ? "border-l-gray-400" : "border-l-black"
-						}`}
-					></div>
-				</button>
-			)}
+					{showDots && (
+						<div
+							role="tablist"
+							aria-label="Slides"
+							className="absolute bottom-3 left-0 right-0 flex justify-center gap-2"
+						>
+							{slides.map((slide, index) => (
+								<button
+									key={slide.id}
+									role="tab"
+									aria-selected={index === current}
+									aria-label={`Go to slide ${index + 1}`}
+									onClick={() => setCurrent(index)}
+									className={`h-2 rounded-full transition-all ${index === current ? "w-5 bg-white" : "w-2 bg-white/50 hover:bg-white/80"}`}
+								></button>
+							))}
+						</div>
+					)}
+				</section>
+				{showArrows && (
+					<button
+						type="button"
+						onClick={handlerNext}
+						aria-label="Next Slide"
+						disabled={current === total - 1}
+						className="cursor-pointer disabled:cursor-auto"
+					>
+						<div
+							className={`w-0 h-0 border-y-[8px] border-y-transparent border-l-[12px] ${
+								current === total - 1 ? "border-l-gray-400" : "border-l-black"
+							}`}
+						></div>
+					</button>
+				)}
+			</div>
 		</div>
 	);
 }

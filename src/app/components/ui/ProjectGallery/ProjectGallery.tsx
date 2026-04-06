@@ -29,7 +29,7 @@ export default function ProjectGallery() {
 
 	return (
 		<div
-			className={`${viewMode === "gallery" ? "w-[80vw] max-w-[1300px]" : "w-[80vw]"} mx-auto`}
+			className={`${viewMode === "gallery" ? "w-[80vw] max-w-[1300px]" : "w-[80vw]"} mx-auto mb-4`}
 		>
 			{/* Vista de Galería */}
 			{viewMode === "gallery" && (
@@ -52,7 +52,7 @@ export default function ProjectGallery() {
 							<FaThList className="text-xl text-gray-400" />
 						</button>
 					</div>
-					<div className="grid grid-cols-2 gap-24 place-content-between">
+					<div className="grid grid-cols-2 gap-10 md:gap-24 place-content-between">
 						{thumbnails.map((project, index) => (
 							<Thumbnail
 								href={project.href}
@@ -70,7 +70,7 @@ export default function ProjectGallery() {
 
 			{/* Vista de Tabla */}
 			{viewMode === "table" && (
-				<div className="overflow-x-auto overflow-y-hidden">
+				<div className="overflow-x-auto overflow-y-hidden text-xs md:text-base">
 					<table className="w-full border-collapse">
 						<thead>
 							<tr className={`border-b border-gray-300 ${headerAnimate}`}>

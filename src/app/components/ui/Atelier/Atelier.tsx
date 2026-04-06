@@ -12,9 +12,9 @@ export default function Atelier() {
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
 
 	return (
-		<div className="container-atelier flex items-center p-10 gap-8 absolute top-1/2 -translate-y-1/2  w-fit">
+		<div className="container-atelier flex flex-col md:flex-row p-10 gap-8 w-full relative">
 			<div
-				className={`relative w-[600px] max-w-[600px] h-[685px] animate-fade-slide ${animate}`}
+				className={` top-0 w-full h-[80dvh] aspect-square md:sticky md:aspect-[3/4] md:h-screen lg:h-[680px] lg:max-h[680px] lg:max-w-[625px]  animate-fade-slide ${animate}`}
 				style={{ animationDelay: "400ms" }}
 			>
 				<Image
@@ -25,7 +25,7 @@ export default function Atelier() {
 				/>
 			</div>
 
-			<div className="w-[650px] max-w-[650px] text-justify flex flex-col gap-6">
+			<div className="w-full text-justify flex flex-col gap-6 lg:max-w-[680px]">
 				{paragraphs.map((text, index) => {
 					const htmlContent = text
 						.replace(/<bold>/g, '<strong class="font-bold">')
