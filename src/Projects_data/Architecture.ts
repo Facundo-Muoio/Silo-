@@ -160,11 +160,6 @@ export const architecture = {
 			src: "/images/architecture/economic_sciences_SL/ECPCE- Plantas cortes vistas FINAL.webp",
 			alt: "Plantas y cortes del proyecto ECPCE",
 		},
-		{
-			id: 11,
-			src: "/images/architecture/economic_sciences_SL/oo.webp",
-			alt: "Perspectiva isométrica del proyecto",
-		},
 	],
 	campo_la_macarena: [
 		{
