@@ -1,7 +1,10 @@
+"use client";
 import SelectedInfo from "../SelectedInfo/SelectedInfo";
 import Slider from "../Slider/Slider";
 import { selectedImages } from "@/src/Projects_data/Selected";
 import SecondaryFooter from "../SecondaryFooter/SecondaryFooter";
+import useClickImage from "@/src/app/hooks/useClickImage";
+import ModalImage from "../ModalImage/ModalImage";
 
 interface Props {
 	id: 1 | 2 | 3 | 4 | 5 | 6 | 8;
@@ -10,6 +13,7 @@ interface Props {
 
 export default function Selected({ id, lenguage }: Props) {
 	const images = selectedImages[id];
+	const { isOpen, alt, src, handlerClick, onClose } = useClickImage();
 	return (
 		<>
 			<div className="container_selected flex flex-col max-sm:gap-12 gap-8 relative p-6 md:p-10 w-full min-h-[90vh]">
@@ -23,8 +27,10 @@ export default function Selected({ id, lenguage }: Props) {
 					loop={false}
 					showDots={true}
 					classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[50vw] items-start"
+					onClick={handlerClick}
 				/>
 			</div>
+			<ModalImage src={src} alt={alt} isOpen={isOpen} onClose={onClose} />
 			<SecondaryFooter
 				lenguage={lenguage}
 				className="lg:absolute lg:-bottom-7 lg:right-0 px-6 md:px-10"

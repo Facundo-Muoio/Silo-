@@ -5,7 +5,7 @@ interface Props {
 export default function RowArchive({ children }: Props) {
 	return (
 		<div className="w-full overflow-x-auto scrollbar-hide py-4">
-			<div className="flex flex-nowrap gap-1 lg:gap-4 landscape:max-lg:min-w-max">
+			<div className="flex flex-nowrap gap-1 lg:gap-4 landscape:max-lg:min-w-max max-sm:min-w-[100vh]">
 				{children}
 			</div>
 		</div>

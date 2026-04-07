@@ -5,7 +5,8 @@ import { archives_data } from "@/src/Projects_data/Achive";
 import SecondaryFooter from "../SecondaryFooter/SecondaryFooter";
 import { useLenguage } from "@/src/app/contexts/LenguageProvider";
 import { useState } from "react";
-
+import useClickImage from "@/src/app/hooks/useClickImage";
+import ModalImage from "../ModalImage/ModalImage";
 interface Props {
 	id: number;
 }
@@ -19,6 +20,7 @@ export default function ArchiveGallery({ id }: Props) {
 	const client = lenguage === "en" ? "Client_" : "Cliente_";
 	const [currentIndex, setCurrentIndex] = useState(id - 1);
 	const staggerStepMs = 200;
+	const { isOpen, alt, src, handlerClick, onClose } = useClickImage();
 
 	const handler = (buttonPressed: string) => {
 		if (buttonPressed === "prev") {
@@ -64,8 +66,11 @@ export default function ArchiveGallery({ id }: Props) {
 					classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[63vw] relative"
 					aspectRatio="md:aspect-[16/9]"
 					onSlideChange={handler}
+					onClick={handlerClick}
+					classNameImage="landscape:object-contain portrait:object-cover"
 				/>
 			</div>
+			<ModalImage src={src} alt={alt} isOpen={isOpen} onClose={onClose} />
 			<SecondaryFooter lenguage={lenguage} className="lg:fixed bottom-0" />
 		</>
 	);

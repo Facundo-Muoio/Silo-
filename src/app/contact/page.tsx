@@ -12,7 +12,7 @@ export default async function page() {
 			<Contact />
 			<SecondaryFooter
 				lenguage={lenguage}
-				className="fixed bottom-0 right-0 landscape:max-lg:static landscape:max-lg:text-xs "
+				className="fixed bottom-0 right-0 landscape:max-lg:static landscape:max-lg:text-xs max-lg:mt-6"
 			/>
 		</>
 	);

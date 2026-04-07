@@ -11,7 +11,7 @@ export default async function page() {
 	return (
 		<>
 			<Atelier />
-			<SecondaryFooter lenguage={lenguage} />
+			<SecondaryFooter lenguage={lenguage} className="max-lg:mt-6" />
 		</>
 	);
 }

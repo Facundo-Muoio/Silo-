@@ -26,6 +26,7 @@ interface SliderProps {
 	aspectRatio?: string;
 	animationDelay?: string;
 	onSlideChange?: (arg: string) => void;
+	onClick?: (src: string, alt: string) => void;
 	classNameImage?: string;
 }
 
@@ -44,6 +45,7 @@ export default function Slider({
 	aspectRatio,
 	animationDelay = "500ms",
 	onSlideChange,
+	onClick,
 }: SliderProps) {
 	const { current, setCurrent, next, pause, prev, resume, total } = useSlider({
 		slides,
@@ -140,9 +142,10 @@ export default function Slider({
 									alt={slide.alt}
 									sizes="min-w-full"
 									fill
-									className={`object-cover ${classNameImage}`}
+									className={`object-cover cursor-pointer ${classNameImage}`}
 									onMouseEnter={pause}
 									onMouseLeave={resume}
+									onClick={() => onClick && onClick(slide.src, slide.alt)}
 								/>
 								{slide.caption && (
 									<p
