@@ -31,6 +31,8 @@ export default function VisualizationGallery() {
 	const messages = useMessages();
 	const lengthItems = messages.Visualization.selected.length;
 	const selectedItems = messages.Visualization.selected.slice(0, lengthItems);
+	console.log(messages);
+	console.log({ selectedItems });
 	const width =
 		state === "Seleccionados" || state === "Selected"
 			? "max-w-[1300px]"

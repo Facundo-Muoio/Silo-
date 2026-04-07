@@ -46,7 +46,7 @@ export default async function page({
 					classNameImage="min-lg:object-contain"
 					loop={false}
 					showDots={false}
-					classNameContainer="hidden lg:flex w-full sticky top-0 h-[100dvh]"
+					classNameContainer="hidden lg:flex w-full sticky top-0 h-[100svh]"
 				/>
 			</div>
 			<SecondaryFooter lenguage={lenguage} />

@@ -78,6 +78,64 @@
 		"selected": [
 			{
 				"id": 1,
+				"name": "Nuevo Edificio de Aulas en Logroño, Universidad de La Rioja",
+				"year": "2026",
+				"location": "Logroño, España",
+				"client": "PINEARQ"
+			},
+			{
+				"id": 2,
+				"name": "Segunda Escuela Secundaria de Podgorica, Montenegro",
+				"year": "2025",
+				"location": "Podgorica, Montenegro",
+				"client": "Silo arquitectes, Pantano Arquitectura, Madi arq, SMA"
+			},
+			{
+				"id": 3,
+				"name": "Edificio para la Investigación en el campo de las Ciencias de la Salud",
+				"year": "2025",
+				"location": "Barcelona, España",
+				"client": "PINEARQ"
+			},
+			{
+				"id": 4,
+				"name": "Vivienda Conci",
+				"year": "2025",
+				"location": "Córdoba, Argentina",
+				"client": "3164.Estudio"
+			},
+			{
+				"id": 5,
+				"name": "Salón de Eventos “La Paz”",
+				"year": "2023",
+				"location": "Córdoba, Argentina",
+				"client": "Alarcia Ferrer, Ignacio de Biasi"
+			},
+			{
+				"id": 6,
+				"name": "Casa BS",
+				"year": "2024",
+				"location": "Córdoba, Argentina",
+				"client": "3164.Estudio"
+			},
+			{
+				"id": 7,
+				"name": "Casa Sum",
+				"year": "2024",
+				"location": "Córdoba, Argentina",
+				"client": "Lucrecia Frias"
+			},
+			{
+				"id": 8,
+				"name": "Casa Oculta",
+				"year": "2023",
+				"location": "Córdoba, Argentina",
+				"client": "3164.Estudio"
+			}
+		],
+		"archive": [
+			{
+				"id": 1,
 				"name": "Reflejos Urbanos",
 				"year": "2026",
 				"client": "Silo arquitectes, SMA, Madi Arq, Santiago Espeche"

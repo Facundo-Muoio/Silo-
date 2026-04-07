@@ -31,14 +31,16 @@ export default function ProjectGallery() {
 	return (
 		<>
 			<div
-				className={`w-full max-w-[1300px] 
+				className={`flex-1 w-full max-w-[1300px] 
 			 p-6 md:p-10 mb-4 mx-auto`}
 			>
 				{/* Vista de Galería */}
 				{viewMode === "gallery" && (
 					<div>
 						{/* Botones para cambiar de vista - visible en modo galería */}
-						<div className={`flex justify-end mb-6 gap-2 ${fadeSlideUp}`}>
+						<div
+							className={`flex flex-1 justify-end mb-6 gap-2 ${fadeSlideUp}`}
+						>
 							<button
 								onClick={() => setViewMode("gallery")}
 								className="p-1 transition-opacity duration-200 hover:opacity-70 cursor-pointer"
@@ -55,7 +57,7 @@ export default function ProjectGallery() {
 								<FaThList className="text-xl text-gray-400" />
 							</button>
 						</div>
-						<div className="grid grid-cols-2 gap-10 md:gap-24 place-content-between">
+						<div className="grid grid-cols-2 gap-10 md:gap-24 place-content-between justify-between">
 							{thumbnails.map((project, index) => (
 								<Thumbnail
 									href={project.href}
@@ -137,12 +139,11 @@ export default function ProjectGallery() {
 					</div>
 				)}
 			</div>
-			{viewMode === "gallery" && <SecondaryFooter lenguage={lenguage} />}
+			{viewMode === "gallery" && (
+				<SecondaryFooter lenguage={lenguage} className="mt-auto" />
+			)}
 			{viewMode === "table" && (
-				<SecondaryFooter
-					lenguage={lenguage}
-					className="max-[490px]:relative absolute bottom-0 right-0"
-				/>
+				<SecondaryFooter lenguage={lenguage} className="mt-auto" />
 			)}
 		</>
 	);

@@ -68,12 +68,12 @@ export default function Navbar({ children }: TNavBar) {
 			<ul
 				className={`w-full text-[20px] flex flex-col gap-4 p-6 absolute lg:hidden overflow-hidden border-x-0 border-black bg-white z-10 ${
 					isOpen
-						? "h-[70dvh] opacity-100 border-y-1"
-						: "h-0 p-0 opacity-0 border-y-0"
+						? "h-[70lvh] min-h-fit opacity-100 border-y-1 pointer-events-auto"
+						: "h-0 opacity-0 border-y-0 pointer-events-none"
 				}`}
 				style={{
 					transition: isOpen
-						? "height 500ms ease-out, opacity 500ms ease-out, border-color 500ms ease-out, border-width 500ms ease-out"
+						? "height 1ms ease-out, opacity 500ms ease-out, border-color 500ms ease-out, border-width 500ms ease-out"
 						: "height 500ms ease-out 150ms, opacity 500ms ease-out 150ms, border-color 500ms ease-out 150ms, border-width 500ms ease-out 150ms",
 				}}
 			>

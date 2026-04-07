@@ -11,8 +11,10 @@ export default function GridArchive() {
 	const mounted = useMounted();
 	const animate = mounted ? "animate-slide-in-left" : "opacity-0";
 
+	console.log({ archives_data });
+
 	return (
-		<div className="overflow-x-auto">
+		<div className="w-full">
 			<RowArchive>
 				<Archive
 					className={`w-[calc(35%-4px)] lg:w-[calc(35%)] ${animate}`}

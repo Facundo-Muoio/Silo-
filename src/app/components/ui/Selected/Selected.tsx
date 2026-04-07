@@ -11,19 +11,24 @@ interface Props {
 export default function Selected({ id, lenguage }: Props) {
 	const images = selectedImages[id];
 	return (
-		<div className="container_selected flex flex-col gap-8 relative p-10 w-full h-screen">
-			<SelectedInfo id={id} className="lg:absolute lg:left-10 lg:top-10" />
-			<Slider
-				slides={images}
-				className="w-full max-w-full lg:max-w-[50vw]"
-				loop={false}
-				showDots={true}
-				classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[50vw] items-start"
-			/>
+		<>
+			<div className="container_selected flex flex-col max-sm:gap-12 gap-8 relative p-6 md:p-10 w-full min-h-[90vh]">
+				<SelectedInfo
+					id={id}
+					className="lg:absolute lg:left-10 lg:top-10 max-sm:ml-[20px] max-md:ml-[36px]"
+				/>
+				<Slider
+					slides={images}
+					className="w-full max-w-full lg:max-w-[50vw]"
+					loop={false}
+					showDots={true}
+					classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[50vw] items-start"
+				/>
+			</div>
 			<SecondaryFooter
 				lenguage={lenguage}
-				className="lg:absolute lg:bottom-0 lg:right-0 mx-10"
+				className="lg:absolute lg:-bottom-7 lg:right-0 px-6 md:px-10"
 			/>
-		</div>
+		</>
 	);
 }
