@@ -78,218 +78,165 @@
 		"selected": [
 			{
 				"id": 1,
-				"name": "Nuevo Edificio de Aulas en Logroño, Universidad de La Rioja",
+				"name": "Reflejos Urbanos",
 				"year": "2026",
-				"location": "Logroño, España",
-				"client": "PINEARQ"
+				"client": "Silo arquitectes, SMA, Madi Arq, Santiago Espeche"
 			},
 			{
 				"id": 2,
-				"name": "Segunda Escuela Secundaria de Podgorica, Montenegro",
-				"year": "2025",
-				"location": "Podgorica, Montenegro",
-				"client": "Silo arquitectes, Pantano Arquitectura, Madi arq, SMA"
-			},
-			{
-				"id": 3,
-				"name": "Edificio para la Investigación en el campo de las Ciencias de la Salud",
-				"year": "2025",
-				"location": "Barcelona, España",
-				"client": "PINEARQ"
-			},
-			{
-				"id": 4,
-				"name": "Vivienda Conci",
-				"year": "2025",
-				"location": "Córdoba, Argentina",
-				"client": "3164.Estudio"
-			},
-			{
-				"id": 5,
-				"name": "Salón de Eventos “La Paz”",
-				"year": "2023",
-				"location": "Córdoba, Argentina",
-				"client": "Alarcia Ferrer, Ignacio de Biasi"
-			},
-			{
-				"id": 6,
-				"name": "Casa BS",
-				"year": "2024",
-				"location": "Córdoba, Argentina",
-				"client": "3164.Estudio"
-			},
-			{
-				"id": 7,
-				"name": "Casa Sum",
-				"year": "2024",
-				"location": "Córdoba, Argentina",
-				"client": "Lucrecia Frias"
-			},
-			{
-				"id": 8,
-				"name": "Casa Escondida",
-				"year": "2023",
-				"location": "Córdoba, Argentina",
-				"client": "3164.Estudio"
-			}
-		],
-		"archive": [
-			{
-				"id": 1,
-				"name": "Paseo Comercial",
-				"year": "2023",
-				"client": "3164.Estudio"
-			},
-			{
-				"id": 2,
-				"name": "El Llanto de Tláloc",
-				"year": "2023",
-				"client": "Silo Arquitectes, Pantano Arquitectura, Luquet Arquitectura, Panichelli Renzo"
-			},
-			{ "id": 3, "name": "Shido", "year": "2023", "client": "3164.Estudio" },
-			{
-				"id": 4,
-				"name": "Casa Roca",
-				"year": "2023",
-				"client": "SDF Arquitectos"
-			},
-			{
-				"id": 5,
-				"name": "Casa TPD",
-				"year": "2023",
-				"client": "Lucrecia Frias"
-			},
-			{
-				"id": 6,
-				"name": "Casa QJ",
-				"year": "2023",
-				"client": "Lucrecia Frias"
-			},
-			{
-				"id": 7,
-				"name": "Posgrado – Especialización en Planificación y Diseño del Paisaje",
-				"year": "2023",
-				"client": "Anc.Arquitectura"
-			},
-			{
-				"id": 8,
-				"name": "”MAVEC”",
-				"year": "2023",
-				"client": "Agostina Allende, Valentina Astini, Gabriele d’Amato, Francesca Apolito, Octavio Lopez"
-			},
-			{
-				"id": 9,
-				"name": "Inestabilidad",
-				"year": "2023",
-				"client": "Silo Arquitectes, Luquet Arquitectura"
-			},
-			{
-				"id": 10,
-				"name": "Tesis de Maestría",
-				"year": "2024",
-				"client": "Gorka Martinez"
-			},
-			{
-				"id": 11,
-				"name": "Casa Modular",
-				"year": "2024",
-				"client": "Pantano Arquitectura, Panichelli Renzo, Rojo Martina, Sofia Pantano"
-			},
-			{
-				"id": 12,
-				"name": "Tesis de Maestría",
-				"year": "2024",
-				"client": "Iñigo Unceta"
-			},
-			{
-				"id": 13,
-				"name": "Estudio de Mobiliario y Cafetería, LCI Barcelona",
-				"year": "2024",
-				"client": "Circular Studio"
-			},
-			{
-				"id": 14,
-				"name": "Área Deportiva “Campo La Macarena”, Río Cuarto Golf Club",
-				"year": "2024",
-				"client": "Silo Arquitectes, Pantano Arquitectura, Panichelli Renzo"
-			},
-			{
-				"id": 15,
-				"name": "Antena Multifunción Calzavara",
-				"year": "2024",
-				"client": "Wuilleumier Francisco, Ludueña Andres, Octavio Lopez"
-			},
-			{
-				"id": 16,
-				"name": "El Claustro",
-				"year": "2025",
-				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
-			},
-			{
-				"id": 17,
-				"name": "Taller de Mantenimiento de Autobuses en Barcelona",
-				"year": "2025",
-				"client": "Acto Studio"
-			},
-			{
-				"id": 18,
-				"name": "Centro de Neurociencia Aplicada, Campus Mundet",
-				"year": "2025",
-				"client": "PINE ARQ"
-			},
-			{
-				"id": 19,
-				"name": "Jardín del Edén",
-				"year": "2025",
-				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
-			},
-			{
-				"id": 20,
-				"name": "Interior de Vivienda Unifamiliar",
-				"year": "2025",
-				"client": "eLe Studio"
-			},
-			{
-				"id": 21,
-				"name": "Consejo Profesional de Ciencias Económicas San Luis",
-				"year": "2025",
-				"client": "Silo Arquitectes, Pantano Arquitectura, Madi Arq"
-			},
-			{
-				"id": 22,
-				"name": "Vivienda Gaiman",
-				"year": "2025",
-				"client": "Pantano Arquitectura"
-			},
-			{
-				"id": 23,
-				"name": "Casa Abud",
-				"year": "2025",
-				"client": "German Jimenez"
-			},
-			{
-				"id": 24,
-				"name": "Hub de Innovación Seregno",
+				"name": "Centro de Innovación Seregno",
 				"year": "2025",
 				"client": "Wuilleumier Francisco"
 			},
 			{
-				"id": 25,
+				"id": 3,
 				"name": "Sede del Gobierno Municipal de la Ciudad de San Francisco",
 				"year": "2025",
 				"client": "Silo arquitectes, SMA, Arco Estudio, Rocio Monje"
 			},
 			{
-				"id": 26,
-				"name": "Hub de Innovación Seregno",
+				"id": 4,
+				"name": "Centro de Innovación Seregno",
 				"year": "2025",
 				"client": "Wuilleumier Francisco"
 			},
 			{
+				"id": 5,
+				"name": "Casa Abud",
+				"year": "2025",
+				"client": "German Jimenez"
+			},
+			{
+				"id": 6,
+				"name": "Viviendas Gaiman",
+				"year": "2025",
+				"client": "Pantano Arquitectura"
+			},
+			{
+				"id": 7,
+				"name": "Consejo Profesional de Ciencias Económicas San Luis",
+				"year": "2025",
+				"client": "Silo Arquitectes, Pantano Arquitectura, Madi Arq"
+			},
+			{
+				"id": 8,
+				"name": "Interior de Vivienda Unifamiliar",
+				"year": "2025",
+				"client": "eLe Studio"
+			},
+			{
+				"id": 9,
+				"name": "Jardín del Edén",
+				"year": "2025",
+				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
+			},
+			{
+				"id": 10,
+				"name": "Centro de Neurociencia Aplicada, Campus Mundet",
+				"year": "2025",
+				"client": "PINE ARQ"
+			},
+			{
+				"id": 11,
+				"name": "Taller de Mantenimiento de Autobuses en Barcelona",
+				"year": "2025",
+				"client": "Acto Studio"
+			},
+			{
+				"id": 12,
+				"name": "El Claustro",
+				"year": "2025",
+				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
+			},
+			{
+				"id": 13,
+				"name": "Antena Multifunción Calzavara",
+				"year": "2024",
+				"client": "Wuilleumier Francisco, Ludueña Andres, Octavio Lopez"
+			},
+			{
+				"id": 14,
+				"name": "Área Deportiva “Campo La Macarena”, Rio Cuarto Golf Club",
+				"year": "2024",
+				"client": "Silo Arquitectes, Pantano Arquitectura, Panichelli Renzo"
+			},
+			{
+				"id": 15,
+				"name": "Estudio de Mobiliario y Cafetería, LCI Barcelona",
+				"year": "2024",
+				"client": "Circular Studio"
+			},
+			{
+				"id": 16,
+				"name": "Tesis de Maestría",
+				"year": "2024",
+				"client": "Iñigo Unceta"
+			},
+			{
+				"id": 17,
+				"name": "Casa Modular",
+				"year": "2024",
+				"client": "Pantano Arquitectura, Panichelli Renzo, Rojo Martina, Sofia Pantano"
+			},
+			{
+				"id": 18,
+				"name": "Tesis de Maestría",
+				"year": "2024",
+				"client": "Gorka Martinez"
+			},
+			{
+				"id": 19,
+				"name": "Inestabilidad",
+				"year": "2023",
+				"client": "Silo Arquitectes, Luquet Arquitectura"
+			},
+			{
+				"id": 20,
+				"name": "”MAVEC”",
+				"year": "2023",
+				"client": "Agostina Allende, Valentina Astini, Gabriele d’Amato, Francesca Apolito, Octavio Lopez"
+			},
+			{
+				"id": 21,
+				"name": "Posgrado – Especialización en Planificación y Diseño del Paisaje",
+				"year": "2023",
+				"client": "Anc.Arquitectura"
+			},
+			{
+				"id": 22,
+				"name": "Casa QJ",
+				"year": "2023",
+				"client": "Lucrecia Frias"
+			},
+			{
+				"id": 23,
+				"name": "Casa TPD",
+				"year": "2023",
+				"client": "Lucrecia Frias"
+			},
+			{
+				"id": 24,
+				"name": "Casa Roca",
+				"year": "2023",
+				"client": "SDF Arquitectos"
+			},
+			{
+				"id": 25,
+				"name": "Shido",
+				"year": "2023",
+				"client": "3164.Estudio"
+			},
+			{
+				"id": 26,
+				"name": "El Llanto de Tláloc",
+				"year": "2023",
+				"client": "Silo Arquitectes, Pantano Arquitectura, Luquet Arquitectura, Panichelli Renzo"
+			},
+			{
 				"id": 27,
-				"name": "Reflejos Urbanos",
-				"year": "2026",
-				"client": "Silo arquitectes, SMA, Madi Arq, Santiago Espeche"
+				"name": "Paseo Comercial",
+				"year": "2023",
+				"client": "3164.Estudio"
 			}
 		]
 	},

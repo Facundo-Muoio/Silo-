@@ -37,7 +37,9 @@ export default function VisualizationGallery() {
 			: "w-full";
 
 	return (
-		<div className={`container-visualization w-[80vw] ${width} mx-auto`}>
+		<div
+			className={`container-visualization w-full max-w-[1300px] px-6 md:px-10 mb-4 ${width} mx-auto`}
+		>
 			{(state === "Selected" || state === "Seleccionados") && (
 				<div className="grid grid-cols-2 gap-10 md:gap-24 mb-6 place-content-between mt-6">
 					{selectedItems.map((project: selectedItem, index: number) => {

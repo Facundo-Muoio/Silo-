@@ -12,9 +12,9 @@ export default function Atelier() {
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
 
 	return (
-		<div className="container-atelier flex flex-col md:flex-row p-10 gap-8 w-full relative">
+		<div className="container-atelier flex flex-col lg:flex-row px-6 lg:p-10 gap-8 w-full relative">
 			<div
-				className={` top-0 w-full h-[80dvh] aspect-square md:sticky md:aspect-[3/4] md:h-screen lg:h-[680px] lg:max-h[680px] lg:max-w-[625px]  animate-fade-slide ${animate}`}
+				className={`top-0 w-full h-[80dvh] aspect-square lg:sticky lg:aspect-[3/4] lg:h-screen lg:h-[680px] lg:max-h-[680px] lg:max-w-[625px]  animate-fade-slide ${animate}`}
 				style={{ animationDelay: "400ms" }}
 			>
 				<Image

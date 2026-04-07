@@ -9,6 +9,7 @@ interface Props {
 	year: string;
 	client: string;
 	className: string;
+	style: object;
 }
 
 export default function Archive({
@@ -19,9 +20,13 @@ export default function Archive({
 	year,
 	client,
 	className,
+	style,
 }: Props) {
 	return (
-		<div className={`flex flex-col items-start text-sm ${className}`}>
+		<div
+			className={`flex flex-col items-start text-sm ${className}`}
+			style={style}
+		>
 			<Link href={href} className={"relative w-full h-[150px] lg:h-[200px]"}>
 				<Image src={src} alt={alt} objectFit="cover" fill />
 			</Link>

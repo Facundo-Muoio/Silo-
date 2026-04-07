@@ -12,16 +12,13 @@ export default function Selected({ id, lenguage }: Props) {
 	const images = selectedImages[id];
 	return (
 		<div className="container_selected flex flex-col gap-8 relative p-10 w-full h-screen">
-			<SelectedInfo
-				id={id}
-				className="lg:absolute lg:left-10 lg:top-10 text-sm lg:text-base"
-			/>
+			<SelectedInfo id={id} className="lg:absolute lg:left-10 lg:top-10" />
 			<Slider
 				slides={images}
 				className="w-full max-w-full lg:max-w-[50vw]"
 				loop={false}
 				showDots={true}
-				classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[50vw]"
+				classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[50vw] items-start"
 			/>
 			<SecondaryFooter
 				lenguage={lenguage}

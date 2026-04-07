@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function Footer() {
 	const logo = useTranslations("Logo");
@@ -13,9 +14,19 @@ export default function Footer() {
 				<p>{text("paragraph")}</p>
 				<ul className="flex flex-col">
 					<li className="font-bold">{text("social")}</li>
-					<li>{text("instagram")}</li>
-					<li>{text("linkedin")}</li>
-					<li>{text("behance")}</li>
+					<li>
+						<Link href="https://www.instagram.com/silo.arq/">
+							{text("instagram")}
+						</Link>
+					</li>
+					<li>
+						<Link href="https://www.linkedin.com/">{text("linkedin")}</Link>
+					</li>
+					<li>
+						<Link href="https://www.behance.net/siloarchviz">
+							{text("behance")}
+						</Link>
+					</li>
 				</ul>
 			</div>
 			<div className="flex flex-col md:flex-row md:justify-end">

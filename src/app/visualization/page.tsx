@@ -13,7 +13,7 @@ export default async function page() {
 
 	return (
 		<VisualizationProvider>
-			<div>
+			<div className="mt-8">
 				<GroupButtons>
 					<Button
 						href={"/visualization/selected"}

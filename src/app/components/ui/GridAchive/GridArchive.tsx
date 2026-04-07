@@ -1,18 +1,22 @@
 import { useTranslations } from "next-intl";
 import RowArchive from "./RowAchive/RowArchive";
 import { archives_data } from "../../../../Projects_data/Achive";
+import { useMounted } from "@/src/app/hooks/useMounted";
 import Archive from "./RowAchive/Archive/Archive";
 
 export default function GridArchive() {
 	const t = useTranslations("Visualization");
 	const archives = t.raw("archive");
 	const href = "/visualization/archive/";
+	const mounted = useMounted();
+	const animate = mounted ? "animate-slide-in-left" : "opacity-0";
 
 	return (
-		<div>
+		<div className="overflow-x-auto">
 			<RowArchive>
 				<Archive
-					className="w-[calc(35%-4px)] lg:w-[calc(35%)]"
+					className={`w-[calc(35%-4px)] lg:w-[calc(35%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 0 * 0.08}s` }}
 					alt={archives_data[0].alt}
 					src={archives_data[0].src}
 					href={href + archives_data[0].id}
@@ -21,7 +25,8 @@ export default function GridArchive() {
 					client={archives[0].client}
 				/>
 				<Archive
-					className="w-[calc(28%-4px)] lg:w-[calc(28%-16px)]"
+					className={`w-[calc(28%-4px)] lg:w-[calc(28%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 1 * 0.08}s` }}
 					alt={archives_data[1].alt}
 					src={archives_data[1].src}
 					href={href + archives_data[1].id}
@@ -30,7 +35,8 @@ export default function GridArchive() {
 					client={archives[1].client}
 				/>
 				<Archive
-					className="w-[calc(15%-4px)] lg:w-[calc(15%-16px)]"
+					className={`w-[calc(15%-4px)] lg:w-[calc(15%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 2 * 0.08}s` }}
 					alt={archives_data[2].alt}
 					src={archives_data[2].src}
 					href={href + archives_data[2].id}
@@ -39,7 +45,8 @@ export default function GridArchive() {
 					client={archives[2].client}
 				/>
 				<Archive
-					className="w-[calc(22%-4px)] lg:w-[calc(22%-16px)]"
+					className={`w-[calc(22%-4px)] lg:w-[calc(22%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 3 * 0.08}s` }}
 					alt={archives_data[3].alt}
 					src={archives_data[3].src}
 					href={href + archives_data[3].id}
@@ -51,7 +58,8 @@ export default function GridArchive() {
 
 			<RowArchive>
 				<Archive
-					className="w-[calc(25%-4px)] lg:w-[calc(25%)]"
+					className={`w-[calc(25%-4px)] lg:w-[calc(25%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 4 * 0.08}s` }}
 					alt={archives_data[4].alt}
 					src={archives_data[4].src}
 					href={href + archives_data[4].id}
@@ -60,16 +68,18 @@ export default function GridArchive() {
 					client={archives[4].client}
 				/>
 				<Archive
-					className="w-[calc(15%-4px)] lg:w-[calc(15%-16px)]"
+					className={`w-[calc(15%-4px)] lg:w-[calc(15%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 5 * 0.08}s` }}
 					alt={archives_data[5].alt}
 					src={archives_data[5].src}
-					href={href + archives_data[5].id + 5}
+					href={href + archives_data[5].id}
 					name={archives[5].name}
 					year={archives[5].year}
 					client={archives[5].client}
 				/>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%-16px)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 6 * 0.08}s` }}
 					alt={archives_data[6].alt}
 					src={archives_data[6].src}
 					href={href + archives_data[6].id}
@@ -78,7 +88,8 @@ export default function GridArchive() {
 					client={archives[6].client}
 				/>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%-16px)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 7 * 0.08}s` }}
 					alt={archives_data[7].alt}
 					src={archives_data[7].src}
 					href={href + archives_data[7].id}
@@ -90,7 +101,8 @@ export default function GridArchive() {
 
 			<RowArchive>
 				<Archive
-					className="w-[calc(60%-4px)] lg:w-[calc(60%)]"
+					className={`w-[calc(60%-4px)] lg:w-[calc(60%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 8 * 0.08}s` }}
 					alt={archives_data[8].alt}
 					src={archives_data[8].src}
 					href={href + archives_data[8].id}
@@ -99,16 +111,18 @@ export default function GridArchive() {
 					client={archives[8].client}
 				/>
 				<Archive
-					className="w-[calc(25%-4px)] lg:w-[calc(25%-16px)]"
+					className={`w-[calc(25%-4px)] lg:w-[calc(25%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 9 * 0.08}s` }}
 					alt={archives_data[9].alt}
 					src={archives_data[9].src}
-					href={href + archives_data[9].id + 9}
+					href={href + archives_data[9].id}
 					name={archives[9].name}
 					year={archives[9].year}
 					client={archives[9].client}
 				/>
 				<Archive
-					className="w-[calc(15%-4px)] lg:w-[calc(15%-16px)]"
+					className={`w-[calc(15%-4px)] lg:w-[calc(15%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 10 * 0.08}s` }}
 					alt={archives_data[10].alt}
 					src={archives_data[10].src}
 					href={href + archives_data[10].id}
@@ -120,7 +134,8 @@ export default function GridArchive() {
 
 			<RowArchive>
 				<Archive
-					className="w-[calc(23.33%-4px)] lg:w-[calc(23.33%)]"
+					className={`w-[calc(23.33%-4px)] lg:w-[calc(23.33%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 11 * 0.08}s` }}
 					alt={archives_data[11].alt}
 					src={archives_data[11].src}
 					href={href + archives_data[11].id}
@@ -129,16 +144,18 @@ export default function GridArchive() {
 					client={archives[11].client}
 				/>
 				<Archive
-					className="w-[calc(23.33%-4px)] lg:w-[calc(23.33%-16px)]"
+					className={`w-[calc(23.33%-4px)] lg:w-[calc(23.33%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 12 * 0.08}s` }}
 					alt={archives_data[12].alt}
 					src={archives_data[12].src}
-					href={href + archives_data[12].id + 9}
+					href={href + archives_data[12].id}
 					name={archives[12].name}
 					year={archives[12].year}
 					client={archives[12].client}
 				/>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%-16px)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 13 * 0.08}s` }}
 					alt={archives_data[13].alt}
 					src={archives_data[13].src}
 					href={href + archives_data[13].id}
@@ -147,7 +164,8 @@ export default function GridArchive() {
 					client={archives[13].client}
 				/>
 				<Archive
-					className="w-[calc(23.33%-4px)] lg:w-[calc(23.33%-16px)]"
+					className={`w-[calc(23.33%-4px)] lg:w-[calc(23.33%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 14 * 0.08}s` }}
 					alt={archives_data[14].alt}
 					src={archives_data[14].src}
 					href={href + archives_data[14].id}
@@ -159,7 +177,8 @@ export default function GridArchive() {
 
 			<RowArchive>
 				<Archive
-					className="w-[calc(25%-4px)] lg:w-[calc(25%)]"
+					className={`w-[calc(25%-4px)] lg:w-[calc(25%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 15 * 0.08}s` }}
 					alt={archives_data[15].alt}
 					src={archives_data[15].src}
 					href={href + archives_data[15].id}
@@ -168,16 +187,18 @@ export default function GridArchive() {
 					client={archives[15].client}
 				/>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%-16px)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 16 * 0.08}s` }}
 					alt={archives_data[16].alt}
 					src={archives_data[16].src}
-					href={href + archives_data[16].id + 9}
+					href={href + archives_data[16].id}
 					name={archives[16].name}
 					year={archives[16].year}
 					client={archives[16].client}
 				/>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%-16px)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 17 * 0.08}s` }}
 					alt={archives_data[17].alt}
 					src={archives_data[17].src}
 					href={href + archives_data[17].id}
@@ -186,7 +207,8 @@ export default function GridArchive() {
 					client={archives[17].client}
 				/>
 				<Archive
-					className="w-[calc(15%-4px)] lg:w-[calc(15%-16px)]"
+					className={`w-[calc(15%-4px)] lg:w-[calc(15%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 18 * 0.08}s` }}
 					alt={archives_data[18].alt}
 					src={archives_data[18].src}
 					href={href + archives_data[18].id}
@@ -198,7 +220,8 @@ export default function GridArchive() {
 
 			<RowArchive>
 				<Archive
-					className="w-[calc(27%-4px)] lg:w-[calc(27%)]"
+					className={`w-[calc(27%-4px)] lg:w-[calc(27%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 19 * 0.08}s` }}
 					alt={archives_data[19].alt}
 					src={archives_data[19].src}
 					href={href + archives_data[19].id}
@@ -207,16 +230,18 @@ export default function GridArchive() {
 					client={archives[19].client}
 				/>
 				<Archive
-					className="w-[calc(33%-4px)] lg:w-[calc(33%-16px)]"
+					className={`w-[calc(33%-4px)] lg:w-[calc(33%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 20 * 0.08}s` }}
 					alt={archives_data[20].alt}
 					src={archives_data[20].src}
-					href={href + archives_data[20].id + 9}
+					href={href + archives_data[20].id}
 					name={archives[20].name}
 					year={archives[20].year}
 					client={archives[20].client}
 				/>
 				<Archive
-					className="w-[calc(20%-4px)] lg:w-[calc(20%-16px)]"
+					className={`w-[calc(20%-4px)] lg:w-[calc(20%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 21 * 0.08}s` }}
 					alt={archives_data[21].alt}
 					src={archives_data[21].src}
 					href={href + archives_data[21].id}
@@ -225,7 +250,8 @@ export default function GridArchive() {
 					client={archives[21].client}
 				/>
 				<Archive
-					className="w-[calc(20%-4px)] lg:w-[calc(20%-16px)]"
+					className={`w-[calc(20%-4px)] lg:w-[calc(20%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 22 * 0.08}s` }}
 					alt={archives_data[22].alt}
 					src={archives_data[22].src}
 					href={href + archives_data[22].id}
@@ -237,7 +263,8 @@ export default function GridArchive() {
 
 			<RowArchive>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 23 * 0.08}s` }}
 					alt={archives_data[23].alt}
 					src={archives_data[23].src}
 					href={href + archives_data[23].id}
@@ -246,16 +273,18 @@ export default function GridArchive() {
 					client={archives[23].client}
 				/>
 				<Archive
-					className="w-[calc(18%-4px)] lg:w-[calc(18%-16px)]"
+					className={`w-[calc(18%-4px)] lg:w-[calc(18%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 24 * 0.08}s` }}
 					alt={archives_data[24].alt}
 					src={archives_data[24].src}
-					href={href + archives_data[24].id + 9}
+					href={href + archives_data[24].id}
 					name={archives[24].name}
 					year={archives[24].year}
 					client={archives[24].client}
 				/>
 				<Archive
-					className="w-[calc(22%-4px)] lg:w-[calc(22%-16px)]"
+					className={`w-[calc(22%-4px)] lg:w-[calc(22%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 25 * 0.08}s` }}
 					alt={archives_data[25].alt}
 					src={archives_data[25].src}
 					href={href + archives_data[25].id}
@@ -264,7 +293,8 @@ export default function GridArchive() {
 					client={archives[25].client}
 				/>
 				<Archive
-					className="w-[calc(30%-4px)] lg:w-[calc(30%-16px)]"
+					className={`w-[calc(30%-4px)] lg:w-[calc(30%-16px)] ${animate}`}
+					style={{ animationDelay: `${0.15 + 26 * 0.08}s` }}
 					alt={archives_data[26].alt}
 					src={archives_data[26].src}
 					href={href + archives_data[26].id}

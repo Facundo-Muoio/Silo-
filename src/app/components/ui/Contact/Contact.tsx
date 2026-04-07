@@ -14,16 +14,16 @@ export default function Contact() {
 	const animate = mounted ? "animate-reveal" : "";
 
 	return (
-		<>
+		<div className="flex flex-col items-center justify-between mt-8 px-6 px-10 w-full min-h-[75dvh]">
 			<div
-				className={`relative max-w-[225px] lg:max-w-[225px] aspect-square container_logo mx-auto px-10 pb-5 lg:pb-10 ${animate}`}
+				className={`min-w-[250px] max-w-[250px] aspect-square container_logo ${animate}`}
 				style={{ animationDelay: "0.1s" }}
 			>
 				<Image src="/images/Logo.webp" fill sizes="300px" alt="logo de silo" />
 			</div>
 
 			<div
-				className={`container_email w-full mt-5 lg:mt-10 flex justify-center text-sm lg:text-lg  ${animate}`}
+				className={`container_email w-full flex justify-center justify-self-center text-base md:text-lg landscape:max-lg:text-base ${animate}`}
 				style={{ animationDelay: "0.3s" }}
 			>
 				<a
@@ -35,7 +35,7 @@ export default function Contact() {
 			</div>
 
 			<div
-				className={`container_social_medias text-sm flex-wrap  justify-center lg:flex-nowrap lg:text-lg flex lg:justify-between items-end p-10 w-full gap-4 lg:gap-8 lg:fixed bottom-10 ${animate}`}
+				className={`container_social_medias flex flex-wrap  justify-center md:flex-nowrap text-base md:text-lg landscape:max-lg:text-base md:justify-between items-end  w-full gap-4 lg:gap-8  ${animate}`}
 				style={{ animationDelay: "0.5s" }}
 			>
 				<div className="container_linkedin">
@@ -52,7 +52,7 @@ export default function Contact() {
 				<div className="container_instagrams flex gap-4 lg:gap-8">
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
-						href="https://www.instagram.com/"
+						href="https://www.instagram.com/silo.arq/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -60,7 +60,7 @@ export default function Contact() {
 					</a>
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
-						href="https://www.instagram.com/"
+						href="https://www.instagram.com/silo.viz/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -71,7 +71,7 @@ export default function Contact() {
 				<div className="container_behance">
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
-						href="https://www.behance.net/"
+						href="https://www.behance.net/siloarchviz"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -79,6 +79,6 @@ export default function Contact() {
 					</a>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

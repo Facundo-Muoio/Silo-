@@ -25,27 +25,28 @@ export default async function page({
 
 	return (
 		<>
-			<div className="flex flex-wrap lg:flex-nowrap gap-8 w-full px-10 py-5">
+			<div className="flex flex-wrap lg:flex-nowrap gap-8 w-full px-6 md:px-10 py-8">
 				<InfoProject
 					nameProject={projectName}
-					className="w-full lg:w-[45%]"
-					children={
-						<Slider
-							slides={arrayImages}
-							className="w-full max-w-[800px]"
-							loop={false}
-							showDots={false}
-							classNameContainer="w-full lg:hidden"
-							animationDelay="0ms"
-						/>
-					}
-				/>
+					className="w-full lg:w-[45%] self-center"
+				>
+					<Slider
+						slides={arrayImages}
+						className="w-full max-w-[1000px]"
+						classNameImage="landscape:max-lg:object-contain"
+						loop={false}
+						showDots={false}
+						classNameContainer="w-full lg:hidden"
+						animationDelay="0ms"
+					/>
+				</InfoProject>
 				<Slider
 					slides={arrayImages}
-					className="w-full max-w-[800px] h-full"
+					className="w-full full max-w-[1000px] h-full"
+					classNameImage="min-lg:object-contain"
 					loop={false}
 					showDots={false}
-					classNameContainer="hidden lg:flex w-full sticky top-0 h-screen"
+					classNameContainer="hidden lg:flex w-full sticky top-0 h-[100dvh]"
 				/>
 			</div>
 			<SecondaryFooter lenguage={lenguage} />

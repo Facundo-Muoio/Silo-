@@ -4,7 +4,7 @@ interface Props {
 
 export default function RowArchive({ children }: Props) {
 	return (
-		<div className="row w-full px-10 py-4 flex flex-wrap gap-1 lg:gap-4">
+		<div className="row w-full min-w-[1000px]  py-4 flex flex-wrap gap-1 lg:gap-4">
 			{children}
 		</div>
 	);

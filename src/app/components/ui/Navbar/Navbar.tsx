@@ -31,8 +31,10 @@ export default function Navbar({ children }: TNavBar) {
 
 	return (
 		<>
-			<div className="navbar flex flex-row justify-between w-full p-10 items-center relative top-0 right-0 left-0">
-				<h2 className="text-[22px]">{logo("title")}</h2>
+			<div className="navbar flex flex-row justify-between w-full p-6 md:p-10 items-center relative top-0 right-0 left-0">
+				<h2 className="text-[20px] sm:text-[22px]">
+					<Link href={"/"}>{logo("title")}</Link>
+				</h2>
 				<ul className="hidden lg:flex gap-4 lg:text-lg">
 					{navLinks.map(({ name, href }) => (
 						<Link
@@ -66,7 +68,7 @@ export default function Navbar({ children }: TNavBar) {
 			<ul
 				className={`w-full text-[20px] flex flex-col gap-4 p-6 absolute lg:hidden overflow-hidden border-x-0 border-black bg-white z-10 ${
 					isOpen
-						? "h-[65dvh] opacity-100 border-y-1"
+						? "h-[70dvh] opacity-100 border-y-1"
 						: "h-0 p-0 opacity-0 border-y-0"
 				}`}
 				style={{

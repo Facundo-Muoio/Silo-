@@ -136,76 +136,81 @@
 		"archive": [
 			{
 				"id": 1,
-				"name": "Commercial Promenade",
-				"year": "2023",
-				"client": "3164.Estudio"
+				"name": "Urban Reflections",
+				"year": "2026",
+				"client": "Silo arquitectes, SMA, Madi Arq, Santiago Espeche"
 			},
 			{
 				"id": 2,
-				"name": "Tlaloc's Cry",
-				"year": "2023",
-				"client": "Silo Arquitectes, Pantano Arquitectura, Luquet Arquitectura, Panichelli Renzo"
+				"name": "Seregno Innovation Hub",
+				"year": "2025",
+				"client": "Wuilleumier Francisco"
 			},
-			{ "id": 3, "name": "Shido", "year": "2023", "client": "3164.Estudio" },
+			{
+				"id": 3,
+				"name": "Municipal Government Headquarters of the City of San Francisco",
+				"year": "2025",
+				"client": "Silo arquitectes, SMA, Arco Estudio, Rocio Monje"
+			},
 			{
 				"id": 4,
-				"name": "Roca House",
-				"year": "2023",
-				"client": "SDF Arquitectos"
+				"name": "Seregno Innovation Hub",
+				"year": "2025",
+				"client": "Wuilleumier Francisco"
 			},
 			{
 				"id": 5,
-				"name": "TPD House",
-				"year": "2023",
-				"client": "Lucrecia Frias"
+				"name": "Abud House",
+				"year": "2025",
+				"client": "German Jimenez"
 			},
 			{
 				"id": 6,
-				"name": "QJ House",
-				"year": "2023",
-				"client": "Lucrecia Frias"
+				"name": "Gaiman Housing",
+				"year": "2025",
+				"client": "Pantano Arquitectura"
 			},
 			{
 				"id": 7,
-				"name": "Postgraduate – Specialization in Landscape Planning and Design",
-				"year": "2023",
-				"client": "Anc.Arquitectura"
+				"name": "Professional Council of Economic Sciences San Luis",
+				"year": "2025",
+				"client": "Silo Arquitectes, Pantano Arquitectura, Madi Arq"
 			},
 			{
 				"id": 8,
-				"name": "”MAVEC”",
-				"year": "2023",
-				"client": "Agostina Allende, Valentina Astini, Gabriele d’Amato, Francesca Apolito, Octavio Lopez"
+				"name": "Single-Family Home Interior",
+				"year": "2025",
+				"client": "eLe Studio"
 			},
 			{
 				"id": 9,
-				"name": "Instability",
-				"year": "2023",
-				"client": "Silo Arquitectes, Luquet Arquitectura"
+				"name": "Eden’s Garden",
+				"year": "2025",
+				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
 			},
 			{
 				"id": 10,
-				"name": "Master's Thesis",
-				"year": "2024",
-				"client": "Gorka Martinez"
+				"name": "Center for Applied Neuroscience, Mundet Campus",
+				"year": "2025",
+				"client": "PINE ARQ"
 			},
 			{
 				"id": 11,
-				"name": "Modular House",
-				"year": "2024",
-				"client": "Pantano Arquitectura, Panichelli Renzo, Rojo Martina, Sofia Pantano"
+				"name": "Bus Maintenance Workshop in Barcelona",
+				"year": "2025",
+				"client": "Acto Studio"
 			},
 			{
 				"id": 12,
-				"name": "Master's Thesis",
-				"year": "2024",
-				"client": "Iñigo Unceta"
+				"name": "The Cloister",
+				"year": "2025",
+				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
 			},
 			{
 				"id": 13,
-				"name": "Furniture and Cafeteria Study, LCI Barcelona",
+				"name": "Calzavara Multi-function Antenna",
 				"year": "2024",
-				"client": "Circular Studio"
+				"client": "Wuilleumier Francisco, Ludueña Andres, Octavio Lopez"
 			},
 			{
 				"id": 14,
@@ -215,81 +220,81 @@
 			},
 			{
 				"id": 15,
-				"name": "Calzavara Multi-function Antenna",
+				"name": "Furniture and Cafeteria Study, LCI Barcelona",
 				"year": "2024",
-				"client": "Wuilleumier Francisco, Ludueña Andres, Octavio Lopez"
+				"client": "Circular Studio"
 			},
 			{
 				"id": 16,
-				"name": "The Cloister",
-				"year": "2025",
-				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
+				"name": "Master's Thesis",
+				"year": "2024",
+				"client": "Iñigo Unceta"
 			},
 			{
 				"id": 17,
-				"name": "Bus Maintenance Workshop in Barcelona",
-				"year": "2025",
-				"client": "Acto Studio"
+				"name": "Modular House",
+				"year": "2024",
+				"client": "Pantano Arquitectura, Panichelli Renzo, Rojo Martina, Sofia Pantano"
 			},
 			{
 				"id": 18,
-				"name": "Center for Applied Neuroscience, Mundet Campus",
-				"year": "2025",
-				"client": "PINE ARQ"
+				"name": "Master's Thesis",
+				"year": "2024",
+				"client": "Gorka Martinez"
 			},
 			{
 				"id": 19,
-				"name": "Eden’s Garden",
-				"year": "2025",
-				"client": "Silo Arquitectes, Lamas Rocio, Wuilleumier Francisco"
+				"name": "Instability",
+				"year": "2023",
+				"client": "Silo Arquitectes, Luquet Arquitectura"
 			},
 			{
 				"id": 20,
-				"name": "Single-Family Home Interior",
-				"year": "2025",
-				"client": "eLe Studio"
+				"name": "”MAVEC”",
+				"year": "2023",
+				"client": "Agostina Allende, Valentina Astini, Gabriele d’Amato, Francesca Apolito, Octavio Lopez"
 			},
 			{
 				"id": 21,
-				"name": "Professional Council of Economic Sciences San Luis",
-				"year": "2025",
-				"client": "Silo Arquitectes, Pantano Arquitectura, Madi Arq"
+				"name": "Postgraduate – Specialization in Landscape Planning and Design",
+				"year": "2023",
+				"client": "Anc.Arquitectura"
 			},
 			{
 				"id": 22,
-				"name": "Gaiman Housing",
-				"year": "2025",
-				"client": "Pantano Arquitectura"
+				"name": "QJ House",
+				"year": "2023",
+				"client": "Lucrecia Frias"
 			},
 			{
 				"id": 23,
-				"name": "Abud House",
-				"year": "2025",
-				"client": "German Jimenez"
+				"name": "TPD House",
+				"year": "2023",
+				"client": "Lucrecia Frias"
 			},
 			{
 				"id": 24,
-				"name": "Seregno Innovation Hub",
-				"year": "2025",
-				"client": "Wuilleumier Francisco"
+				"name": "Roca House",
+				"year": "2023",
+				"client": "SDF Arquitectos"
 			},
 			{
 				"id": 25,
-				"name": "Municipal Government Headquarters of the City of San Francisco",
-				"year": "2025",
-				"client": "Silo arquitectes, SMA, Arco Estudio, Rocio Monje"
+				"name": "Shido",
+				"year": "2023",
+				"client": "3164.Estudio"
 			},
 			{
 				"id": 26,
-				"name": "Seregno Innovation Hub",
-				"year": "2025",
-				"client": "Wuilleumier Francisco"
+				"name": "Tlaloc's Cry",
+				"year": "2023",
+				"client": "Silo Arquitectes, Pantano Arquitectura, Luquet Arquitectura, Panichelli Renzo"
 			},
 			{
 				"id": 27,
-				"name": "Urban Reflections",
-				"year": "2026",
-				"client": "Silo arquitectes, SMA, Madi Arq, Santiago Espeche"
+				"name": "Commercial Promenade",
+				"year": "2023",
+				"client": "3164.Estudio"
 			}
 		]
 	},

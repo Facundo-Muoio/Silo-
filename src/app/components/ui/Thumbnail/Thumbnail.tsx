@@ -24,7 +24,7 @@ export default function Thumbnail({
 	index,
 	onlySeeName = false,
 	hoverEffect = "darken",
-	parentFolder = "/architecture/",
+	parentFolder = "/architecture",
 }: TyThumbnail) {
 	const mounted = useMounted();
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
@@ -37,8 +37,11 @@ export default function Thumbnail({
 
 	return (
 		<Link
+			scroll={true}
 			href={`${parentFolder}${href}`}
-			className={`thumbnail group relative max-w-[100%] w-full ${animate} aspect-square ${isEven && "place-self-end"} cursor-pointer`}
+			className={`thumbnail group relative max-w-[100%] w-full ${animate} aspect-square ${
+				isEven && "place-self-end"
+			} cursor-pointer`}
 			style={{ animationDelay: `${0.15 + index * 0.08}s` }}
 		>
 			{/* Overlay para efecto "luminoso" */}
@@ -52,7 +55,9 @@ export default function Thumbnail({
 				className={`object-cover transition-all duration-500 ${hoverImageClass}`}
 			/>
 			<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[100]">
-				<span className={`${colorTextHover} font-medium p-4 text-center`}>
+				<span
+					className={`${colorTextHover} font-medium text-sm md:text-base p-1 md:p-4 text-center`}
+				>
 					{name} {onlySeeName ? null : year}
 				</span>
 			</div>

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useSlider } from "./useSlider";
 import { useMounted } from "@/src/app/hooks/useMounted";
+import { useEffect, useCallback } from "react";
 
 interface slideItem {
 	id: number;
@@ -25,6 +26,7 @@ interface SliderProps {
 	aspectRatio?: string;
 	animationDelay?: string;
 	onSlideChange?: (arg: string) => void;
+	classNameImage?: string;
 }
 
 export default function Slider({
@@ -36,8 +38,9 @@ export default function Slider({
 	pauseOnHover = true,
 	loop,
 	initialIndex = 0,
-	className,
 	classNameContainer,
+	className,
+	classNameImage,
 	aspectRatio,
 	animationDelay = "500ms",
 	onSlideChange,
@@ -55,26 +58,49 @@ export default function Slider({
 	const mounted = useMounted();
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
 
-	const handlerPrev = () => {
+	const handlerPrev = useCallback(() => {
 		if (onSlideChange) {
 			onSlideChange("prev");
 		}
 		prev();
-	};
+	}, [onSlideChange, prev]);
 
-	const handlerNext = () => {
+	const handlerNext = useCallback(() => {
 		if (onSlideChange) {
 			onSlideChange("next");
 		}
 		next();
-	};
+	}, [onSlideChange, next]);
+
+	useEffect(() => {
+		const handleKeyDown = (ev: KeyboardEvent) => {
+			switch (ev.key) {
+				case "ArrowLeft":
+					if (current === 0) break;
+					handlerPrev();
+					break;
+				case "ArrowRight":
+					if (current === total - 1) break;
+					handlerNext();
+					break;
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+
+		return () => {
+			window.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [handlerNext, handlerPrev, current, total]);
 
 	return (
 		<div
-			className={`container-slider flex gap-12 justify-center items-center ${animate} ${classNameContainer ?? ""}`}
+			className={`container-slider flex gap-12 justify-center items-center ${animate} ${
+				classNameContainer ?? ""
+			}`}
 			style={{ animationDelay: `${animationDelay}` }}
 		>
-			<div className="relative flex items-center w-full gap-6">
+			<div className="relative flex items-center justify-center w-full gap-2 landscape:gap-6 sm:gap-6">
 				{showArrows && (
 					<button
 						type="button"
@@ -103,7 +129,9 @@ export default function Slider({
 						{slides.map((slide, index) => (
 							<div
 								key={slide.id}
-								className={`wrapper relative min-w-full landscape:max-md:aspect-[16/9] aspect-[3/4] md:aspect-[4/3] ${aspectRatio && aspectRatio}`}
+								className={`wrapper relative min-w-full landscape:max-md:aspect-[16/9] aspect-[3/4] md:aspect-[4/3] ${
+									aspectRatio && aspectRatio
+								}`}
 								aria-label={`Slide ${index + 1} de ${total}: ${slide.alt}`}
 								aria-hidden={index == current}
 							>
@@ -112,7 +140,7 @@ export default function Slider({
 									alt={slide.alt}
 									sizes="min-w-full"
 									fill
-									className="object-cover"
+									className={`object-cover ${classNameImage}`}
 									onMouseEnter={pause}
 									onMouseLeave={resume}
 								/>
@@ -141,7 +169,11 @@ export default function Slider({
 									aria-selected={index === current}
 									aria-label={`Go to slide ${index + 1}`}
 									onClick={() => setCurrent(index)}
-									className={`h-2 rounded-full transition-all ${index === current ? "w-5 bg-white" : "w-2 bg-white/50 hover:bg-white/80"}`}
+									className={`h-2 rounded-full transition-all ${
+										index === current
+											? "w-5 bg-white"
+											: "w-2 bg-white/50 hover:bg-white/80"
+									}`}
 								></button>
 							))}
 						</div>
