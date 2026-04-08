@@ -40,7 +40,13 @@ export default function Contact() {
 				className={`min-w-[250px] max-w-[250px] aspect-square container_logo ${animate}`}
 				style={{ animationDelay: "0.1s" }}
 			>
-				<Image src="/images/Logo.webp" fill sizes="300px" alt="logo de silo" />
+				<Image
+					src="/images/Logo.webp"
+					sizes="(max-width: 640px) 250px, (max-width: 1024px) 250px, 250px"
+					width={250}
+					height={250}
+					alt="logo de silo"
+				/>
 			</div>
 
 			<div
