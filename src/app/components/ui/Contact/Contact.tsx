@@ -11,7 +11,28 @@ export default function Contact() {
 	const mounted = useMounted();
 	const instagram = m.Contact.instagram;
 	const behance = t("behance");
-	const animate = mounted ? "animate-reveal" : "";
+	const animate = mounted ? "animate-fade-slide-up" : "";
+
+	const handleEmailClick = (e: React.MouseEvent) => {
+		e.preventDefault();
+		const clean = email.trim().toLowerCase();
+
+		window.location.href = `mailto:${clean}`;
+
+		setTimeout(() => {
+			window.open(
+				`https://mail.google.com/mail/?view=cm&to=${clean}`,
+				"_blank",
+			);
+		}, 500);
+
+		setTimeout(() => {
+			window.open(
+				`https://outlook.live.com/mail/0/deeplink/compose?to=${clean}`,
+				"_blank",
+			);
+		}, 1000);
+	};
 
 	return (
 		<div className="flex flex-col items-center justify-between mt-8 px-6 px-10 w-full min-h-[75dvh]">
@@ -27,8 +48,8 @@ export default function Contact() {
 				style={{ animationDelay: "0.3s" }}
 			>
 				<a
-					href={`mailto:${email.toLowerCase()}`}
 					className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)] cursor-pointer"
+					onClick={handleEmailClick}
 				>
 					{email}
 				</a>

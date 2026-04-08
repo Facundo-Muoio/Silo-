@@ -140,12 +140,13 @@ export default function Slider({
 								<Image
 									src={slide.src}
 									alt={slide.alt}
-									sizes="min-w-full"
+									sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
 									fill
 									className={`object-cover cursor-pointer ${classNameImage}`}
 									onMouseEnter={pause}
 									onMouseLeave={resume}
 									onClick={() => onClick && onClick(slide.src, slide.alt)}
+									priority={initialIndex === 0}
 								/>
 								{slide.caption && (
 									<p
