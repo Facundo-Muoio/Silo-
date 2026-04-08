@@ -8,7 +8,7 @@ export default function HeroLogo() {
 
 	return (
 		<div
-			className={`max-sm:w-[300px] w-[350px] h-[90dvh] mx-auto flex items-center ${animate}`}
+			className={`max-sm:w-[300px] w-[350px] h-[90vh] mx-auto flex items-center ${animate}`}
 			style={{ animationDelay: "450" }}
 		>
 			{" "}
