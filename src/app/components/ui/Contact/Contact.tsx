@@ -35,7 +35,7 @@ export default function Contact() {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-between mt-8 px-6 px-10 w-full min-h-[75dvh]">
+		<div className="flex flex-col items-center justify-between mt-8 px-6 px-10 w-full min-h-[75dvh] pb-8">
 			<div
 				className={`min-w-[250px] max-w-[250px] aspect-square container_logo ${animate}`}
 				style={{ animationDelay: "0.1s" }}
