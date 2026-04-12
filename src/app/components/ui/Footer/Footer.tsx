@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Dropdown, { DropdownItem } from "../Dropdown/Dropdown";
+// import Image from "next/image";
 
 export default function Footer() {
 	const logo = useTranslations("Logo");
@@ -16,12 +17,16 @@ export default function Footer() {
 				<ul className="flex flex-col">
 					<li className="font-bold">{text("social")}</li>
 					<li>
-						<Dropdown buttonTag="INSTAGRAM">
+						<Dropdown
+							buttonTag="INSTAGRAM"
+							className="hover:font-bold transition-all duration-150"
+						>
 							<DropdownItem delay={String(0.15 + 0 * 0.08) + "s"}>
 								<Link
 									href="https://www.instagram.com/silo.arq/"
 									target="_blank"
 									rel="noopener noreferrer"
+									className="hover:font-bold transition-all duration-150"
 								>
 									ARQ_INSTAGRAM
 								</Link>
@@ -30,6 +35,7 @@ export default function Footer() {
 								<Link
 									href="https://www.instagram.com/silo.viz/"
 									target="_blank"
+									className="hover:font-bold transition-all duration-150"
 									rel="noopener noreferrer"
 								>
 									VIZ_INSTAGRAM
@@ -38,23 +44,44 @@ export default function Footer() {
 						</Dropdown>
 					</li>
 					<li>
-						<Link target="_blank" href="https://linkedin.com/">
+						<Link
+							target="_blank"
+							href="https://linkedin.com/"
+							className="hover:font-bold transition-all duration-150"
+						>
 							{text("linkedin")}
 						</Link>
 					</li>
 					<li>
-						<Link target="_blank" href="https://www.behance.net/siloarchviz">
+						<Link
+							target="_blank"
+							href="https://www.behance.net/siloarchviz"
+							className="hover:font-bold transition-all duration-150"
+						>
 							{text("behance")}
 						</Link>
 					</li>
 				</ul>
 			</div>
-			<div className="flex flex-col md:flex-row max-md:justify-start justify-end w-full mt-4">
+			<div className="flex flex-col md:flex-row max-md:justify-start justify-end  w-full mt-4">
 				<span className=" mr-[30%]">
-					{"< "}MUOIO_DEVELOPMENTS{" >"}
-				</span>
+					{"< "}MUOIO_DEVELOPMENT{" >"}
+				</span>{" "}
 				<span className="">{year + " " + text("copy")}</span>
 			</div>
 		</div>
 	);
 }
+
+/* <span className=" mr-[30%]">
+					{"< "}MUOIO_DEVELOPMENTS{" >"}
+				</span> */
+
+/*				<div className="relative w-[90px]  aspect-square">
+									<Image
+										fill
+										src="/images/logo_personal.png"
+										alt="logo personal"
+										className="object-contain"
+									/>
+								</div>; */

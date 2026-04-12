@@ -4,6 +4,7 @@ import { createContext, useState, useContext } from "react";
 interface Props {
 	children: React.ReactNode;
 	buttonTag: string;
+	className?: string;
 }
 
 interface DropdownContext {
@@ -18,7 +19,7 @@ interface ItemProps {
 
 const DropDownContext = createContext<null | DropdownContext>(null);
 
-export default function Dropdown({ children, buttonTag }: Props) {
+export default function Dropdown({ children, buttonTag, className }: Props) {
 	const [isOpen, setIsOpen] = useState(false);
 	const animate = isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
 
@@ -27,7 +28,7 @@ export default function Dropdown({ children, buttonTag }: Props) {
 	return (
 		<DropDownContext.Provider value={{ isOpen, setIsOpen }}>
 			<button
-				className="border-none outline-none cursor-pointer"
+				className={`border-none outline-none cursor-pointer ${className}`}
 				onClick={handlerClick}
 			>
 				{buttonTag}
