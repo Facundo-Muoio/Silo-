@@ -58,7 +58,7 @@ const thumbnailsRawArchiteecture: ThumbnailRaw[] = [
 			es: "Área deportiva  “Campo La Macarena”",
 		},
 		year: 2024,
-		status: { en: "Propopsal", es: "Propuesta" },
+		status: { en: "Proposal", es: "Propuesta" },
 		hasMention: false,
 	},
 	{
