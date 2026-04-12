@@ -2,23 +2,33 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { IoCloseOutline } from "react-icons/io5";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-interface Props {
-	isOpen: boolean;
-	onClose: () => void;
+interface Image {
+	id: number;
 	src: string;
 	alt: string;
+}
+interface Props {
+	images: Image[];
+	isOpen: boolean;
+	onClose: () => void;
+	currentIndex: number;
+	setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 	className?: string;
 }
-
 export default function ModalImage({
+	className,
+	images,
 	isOpen,
 	onClose,
-	src,
-	alt,
-	className,
+	currentIndex,
+	setCurrentIndex,
 }: Props) {
 	const dialogRef = useRef<HTMLDialogElement>(null);
+	const currentImage = images[currentIndex];
+	const disabledPrevButton = currentIndex === 0 ? true : false;
+	const disabledNextButton = currentIndex === images.length - 1 ? true : false;
 
 	useEffect(() => {
 		const dialog = dialogRef.current;
@@ -45,10 +55,22 @@ export default function ModalImage({
 		};
 	}, [isOpen, onClose]);
 
+	const handlerPrev = () => {
+		if (currentIndex === 0) return;
+		setCurrentIndex(prev => prev - 1);
+	};
+
+	const handlerNext = () => {
+		if (currentIndex === images.length - 1) return;
+		setCurrentIndex(prev => prev + 1);
+	};
+
+	if (!currentImage) return null;
+
 	return (
 		<dialog
 			ref={dialogRef}
-			className="backdrop:bg-black/95 p-0 bg-transparent overflow-auto outline-none w-screen h-screen max-w-none max-h-none border-none "
+			className="backdrop:bg-black/95 p-0 bg-transparent overflow-auto outline-none w-screen h-screen max-w-none max-h-none border-none outline-none focus:outline-none outline-none select-none"
 		>
 			<button
 				onClick={onClose}
@@ -58,13 +80,17 @@ export default function ModalImage({
 				<IoCloseOutline size={50} strokeWidth={1} />
 			</button>
 
-			<div
-				className="w-full h-full flex items-center justify-center p-6 md:p-10"
-				onClick={onClose}
-			>
-				{src && (
+			<div className="relative w-full h-full flex items-center justify-center p-6 md:p-10 outline-none">
+				<button
+					className="cursor-pointer text-white/50 hover:text-white outline-none focus:outline-none trasition-all ease-in-out flex items-center justify-center p-1 disabled:text-white/50"
+					onClick={handlerPrev}
+					disabled={disabledPrevButton}
+				>
+					<IoIosArrowBack size={50} />
+				</button>
+				{images[currentIndex].src && (
 					<div
-						className="relative"
+						className="relative focus:outline-none"
 						style={{
 							width: "min(90vw, 90vh * (16/9))",
 							height: "min(90vh, 90vw * (9/16))",
@@ -74,15 +100,23 @@ export default function ModalImage({
 						onClick={e => e.stopPropagation()}
 					>
 						<Image
-							src={src}
-							alt={alt}
+							src={images[currentIndex].src}
+							alt={images[currentIndex].alt}
 							fill
 							priority
 							sizes="90vw"
-							className={`object-contain pointer-events-auto ${className ?? ""}`}
+							className={`object-contain pointer-events-auto focus:outline-none${className ?? ""}`}
 						/>
 					</div>
 				)}
+
+				<button
+					className="cursor-pointer text-white/50 hover:text-white outline-none focus:outline-none trasition-all ease-in-out flex items-center justify-center p-1 disabled:text-white/50"
+					onClick={handlerNext}
+					disabled={disabledNextButton}
+				>
+					<IoIosArrowForward size={50} />
+				</button>
 			</div>
 		</dialog>
 	);

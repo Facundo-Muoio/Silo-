@@ -17,6 +17,7 @@ type Thumbnail = {
 	name: string;
 	year: number;
 	status: string;
+	hasMentino?: boolean;
 };
 
 export default function ProjectGallery() {
@@ -67,6 +68,8 @@ export default function ProjectGallery() {
 									src={project.src}
 									name={project.name}
 									year={project.year}
+									status={project.status}
+									hasMention={project.hasMention}
 								/>
 							))}
 						</div>

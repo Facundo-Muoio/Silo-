@@ -13,6 +13,8 @@ type TyThumbnail = {
 	onlySeeName?: boolean;
 	hoverEffect?: "darken" | "lighten";
 	parentFolder?: string;
+	hasMention?: boolean;
+	status?: string;
 };
 
 export default function Thumbnail({
@@ -25,6 +27,8 @@ export default function Thumbnail({
 	onlySeeName = false,
 	hoverEffect = "darken",
 	parentFolder = "/architecture",
+	hasMention = false,
+	status,
 }: TyThumbnail) {
 	const mounted = useMounted();
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
@@ -54,12 +58,17 @@ export default function Thumbnail({
 				fill
 				className={`object-cover transition-all duration-500 ${hoverImageClass}`}
 			/>
-			<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[100]">
-				<span
+			<div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[100]">
+				<p
 					className={`${colorTextHover} font-medium text-sm md:text-base p-1 md:p-4 text-center`}
 				>
 					{name} {onlySeeName ? null : year}
-				</span>
+				</p>
+				<p
+					className={`${colorTextHover} font-medium text-sm md:text-base text-center italic`}
+				>
+					{hasMention && status}
+				</p>
 			</div>
 		</Link>
 	);

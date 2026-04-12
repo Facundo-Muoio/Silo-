@@ -7,6 +7,7 @@ type ThumbnailRaw = {
 	name: Localized;
 	year: number;
 	status: Localized;
+	hasMention: boolean;
 };
 
 type typeThumbnails = "architecture" | "visualization";
@@ -21,7 +22,8 @@ const thumbnailsRawArchiteecture: ThumbnailRaw[] = [
 			es: "Concurso Internacional para el Diseño de la Segunda Escuela Secundaria en Podgorica, Montenegro",
 		},
 		year: 2025,
-		status: { en: "Completed", es: "Completado" },
+		status: { en: "Second Prize", es: "Segundo Premio" },
+		hasMention: true,
 	},
 	{
 		id: "2",
@@ -32,7 +34,8 @@ const thumbnailsRawArchiteecture: ThumbnailRaw[] = [
 			es: "Sede del Gobierno Municipal de la Ciudad de San Francisco",
 		},
 		year: 2025,
-		status: { en: "Completed", es: "Completado" },
+		status: { en: "Proposal", es: "Propuesta" },
+		hasMention: false,
 	},
 	{
 		id: "3",
@@ -43,7 +46,8 @@ const thumbnailsRawArchiteecture: ThumbnailRaw[] = [
 			es: "Edificio del Consejo Profesional de Ciencias Económicas de San Luis",
 		},
 		year: 2025,
-		status: { en: "In Progress", es: "En curso" },
+		status: { en: "Proposal", es: "Propuesta" },
+		hasMention: false,
 	},
 	{
 		id: "4",
@@ -54,7 +58,8 @@ const thumbnailsRawArchiteecture: ThumbnailRaw[] = [
 			es: "Área deportiva  “Campo La Macarena”",
 		},
 		year: 2024,
-		status: { en: "Completed", es: "Completado" },
+		status: { en: "Propopsal", es: "Propuesta" },
+		hasMention: false,
 	},
 	{
 		id: "5",
@@ -64,8 +69,9 @@ const thumbnailsRawArchiteecture: ThumbnailRaw[] = [
 			en: "“The Weeping of Tlaloc”",
 			es: "“El llanto de Tláloc”",
 		},
-		year: 2024,
-		status: { en: "Completed", es: "Completado" },
+		year: 2023,
+		status: { en: "Honorable Mention", es: "Mención de Honor" },
+		hasMention: true,
 	},
 ];
 
@@ -76,6 +82,7 @@ export type ThumbnailForGallery = {
 	name: string;
 	year: number;
 	status: string;
+	hasMention: boolean;
 };
 
 /**
@@ -98,5 +105,6 @@ export function getThumbnails(
 		year: t.year,
 		name: t.name[lang],
 		status: t.status[lang],
+		hasMention: t.hasMention,
 	}));
 }

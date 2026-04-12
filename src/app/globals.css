@@ -56,6 +56,17 @@
 	}
 }
 
+@keyframes leftSlideInOut {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-24px);
+		opacity: 0;
+	}
+}
+
 @keyframes reveal-contact {
 	0% {
 		opacity: 0;
@@ -87,6 +98,10 @@
 .animate-slide-in-left {
 	opacity: 0;
 	animation: leftSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-in-out {
+	animation: leftSlideInOut 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-slide-in-right {

@@ -16,7 +16,8 @@ interface Props {
 
 export default function ArchitectureProject({ projectName }: Props) {
 	const arrayImages = architecture[projectName];
-	const { alt, handlerClick, isOpen, onClose, src } = useClickImage();
+	const { onClick, isOpen, onClose, currentIndex, setCurrentIndex } =
+		useClickImage();
 	return (
 		<div className="flex flex-wrap lg:flex-nowrap gap-8 w-full px-6 md:px-10 py-8">
 			<InfoProject
@@ -31,7 +32,9 @@ export default function ArchitectureProject({ projectName }: Props) {
 					showDots={false}
 					classNameContainer="w-full lg:hidden"
 					animationDelay="0ms"
-					onClick={handlerClick}
+					onClickImage={onClick}
+					setCurrentIndex={setCurrentIndex}
+					currentIndex={currentIndex}
 				/>
 			</InfoProject>
 			<Slider
@@ -41,9 +44,17 @@ export default function ArchitectureProject({ projectName }: Props) {
 				loop={false}
 				showDots={false}
 				classNameContainer="hidden lg:flex w-full sticky top-0 h-[100svh]"
-				onClick={handlerClick}
+				onClickImage={onClick}
+				setCurrentIndex={setCurrentIndex}
+				currentIndex={currentIndex}
 			/>
-			<ModalImage src={src} alt={alt} isOpen={isOpen} onClose={onClose} />
+			<ModalImage
+				currentIndex={currentIndex}
+				isOpen={isOpen}
+				onClose={onClose}
+				setCurrentIndex={setCurrentIndex}
+				images={arrayImages}
+			/>
 		</div>
 	);
 }

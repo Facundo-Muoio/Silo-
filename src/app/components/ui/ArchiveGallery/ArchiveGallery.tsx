@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { archives_data } from "@/src/Projects_data/Achive";
 import SecondaryFooter from "../SecondaryFooter/SecondaryFooter";
 import { useLenguage } from "@/src/app/contexts/LenguageProvider";
-import { useState } from "react";
+import { useEffect } from "react";
 import useClickImage from "@/src/app/hooks/useClickImage";
 import ModalImage from "../ModalImage/ModalImage";
 interface Props {
@@ -18,18 +18,13 @@ export default function ArchiveGallery({ id }: Props) {
 	const project = lenguage === "en" ? "Project_" : "Proyecto_";
 	const year = lenguage === "en" ? "Year_" : "Año_";
 	const client = lenguage === "en" ? "Client_" : "Cliente_";
-	const [currentIndex, setCurrentIndex] = useState(id - 1);
 	const staggerStepMs = 200;
-	const { isOpen, alt, src, handlerClick, onClose } = useClickImage();
+	const { onClick, isOpen, onClose, currentIndex, setCurrentIndex } =
+		useClickImage();
 
-	const handler = (buttonPressed: string) => {
-		if (buttonPressed === "prev") {
-			setCurrentIndex(currentIndex - 1);
-		}
-		if (buttonPressed === "next") {
-			setCurrentIndex(currentIndex + 1);
-		}
-	};
+	useEffect(() => {
+		setCurrentIndex(id - 1);
+	}, [id, setCurrentIndex]);
 
 	return (
 		<>
@@ -65,12 +60,19 @@ export default function ArchiveGallery({ id }: Props) {
 					showDots={false}
 					classNameContainer="lg:absolute lg:left-1/2 lg:-translate-x-1/2  w-full lg:max-w-[63vw] relative"
 					aspectRatio="md:aspect-[16/9]"
-					onSlideChange={handler}
-					onClick={handlerClick}
+					onClickImage={onClick}
 					classNameImage="landscape:object-contain portrait:object-cover"
+					setCurrentIndex={setCurrentIndex}
+					currentIndex={currentIndex}
 				/>
 			</div>
-			<ModalImage src={src} alt={alt} isOpen={isOpen} onClose={onClose} />
+			<ModalImage
+				currentIndex={currentIndex}
+				setCurrentIndex={setCurrentIndex}
+				images={archives_data}
+				isOpen={isOpen}
+				onClose={onClose}
+			/>
 			<SecondaryFooter lenguage={lenguage} className="lg:fixed bottom-0" />
 		</>
 	);

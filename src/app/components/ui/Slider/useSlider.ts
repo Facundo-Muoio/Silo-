@@ -9,33 +9,36 @@ export function useSlider({
 	interval = 4000,
 	pauseOnHover = true,
 	loop = true,
-	initialIndex = 0,
+	currentIndex,
+	setCurrentIndex,
 }: Omit<SliderProps, "className" | "showArrows" | "showDots">) {
-	const [current, setCurrent] = useState(initialIndex);
 	const [isPaused, setIsPaused] = useState(false);
 	const total = slides.length;
 
-	const goTo = useCallback((index: number) => {
-		setCurrent(index);
-	}, []);
+	const goTo = useCallback(
+		(index: number) => {
+			setCurrentIndex(index);
+		},
+		[setCurrentIndex],
+	);
 
 	const next = useCallback(() => {
-		if (!loop && current === total - 1) return;
-		if (loop && current === total - 1) {
-			setCurrent(0);
+		if (!loop && currentIndex === total - 1) return;
+		if (loop && currentIndex === total - 1) {
+			setCurrentIndex(0);
 		} else {
-			setCurrent(prev => prev + 1);
+			setCurrentIndex(prev => prev + 1);
 		}
-	}, [current, loop, total]);
+	}, [currentIndex, setCurrentIndex, loop, total]);
 
 	const prev = useCallback(() => {
-		if (!loop && current === 0) return;
-		if (loop && current === 0) {
-			setCurrent(total - 1);
+		if (!loop && currentIndex === 0) return;
+		if (loop && currentIndex === 0) {
+			setCurrentIndex(total - 1);
 		} else {
-			setCurrent(prev => prev - 1);
+			setCurrentIndex(prev => prev - 1);
 		}
-	}, [current, loop, total]);
+	}, [currentIndex, setCurrentIndex, loop, total]);
 
 	const pause = () => pauseOnHover && setIsPaused(true);
 	const resume = () => setIsPaused(false);
@@ -47,8 +50,8 @@ export function useSlider({
 	}, [autoPlay, interval, isPaused, next]);
 
 	return {
-		current,
-		setCurrent,
+		currentIndex,
+		setCurrentIndex,
 		total,
 		next,
 		prev,

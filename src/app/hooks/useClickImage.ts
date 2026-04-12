@@ -1,21 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 export default function useClickImage() {
+	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isOpen, setIsOpen] = useState(false);
-	const [src, setSrc] = useState("");
-	const [alt, setAlt] = useState("");
 
-	const handlerClick = (src: string, alt: string) => {
+	const onClick = useCallback((index: number) => {
+		setCurrentIndex(index);
 		setIsOpen(true);
-		setSrc(src);
-		setAlt(alt);
-	};
+		console.log("hiciste click en open");
+	}, []);
 
-	const onClose = () => {
+	const onClose = useCallback(() => {
 		setIsOpen(false);
-	};
+	}, []);
 
-	return { isOpen, src, alt, handlerClick, onClose };
+	return {
+		isOpen,
+		onClick,
+		onClose,
+		currentIndex,
+		setCurrentIndex,
+	};
 }

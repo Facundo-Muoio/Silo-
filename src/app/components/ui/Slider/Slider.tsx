@@ -26,8 +26,10 @@ interface SliderProps {
 	aspectRatio?: string;
 	animationDelay?: string;
 	onSlideChange?: (arg: string) => void;
-	onClick?: (src: string, alt: string) => void;
+	onClickImage?: (index: number) => void;
 	classNameImage?: string;
+	currentIndex: number;
+	setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function Slider({
@@ -45,9 +47,11 @@ export default function Slider({
 	aspectRatio,
 	animationDelay = "500ms",
 	onSlideChange,
-	onClick,
+	onClickImage,
+	currentIndex,
+	setCurrentIndex,
 }: SliderProps) {
-	const { current, setCurrent, next, pause, prev, resume, total } = useSlider({
+	const { next, pause, prev, resume, total } = useSlider({
 		slides,
 		autoPlay,
 		interval,
@@ -55,22 +59,20 @@ export default function Slider({
 		loop,
 		initialIndex,
 		onSlideChange,
+		setCurrentIndex,
+		currentIndex,
 	});
 
 	const mounted = useMounted();
 	const animate = mounted ? "animate-fade-in-up" : "opacity-0";
 
 	const handlerPrev = useCallback(() => {
-		if (onSlideChange) {
-			onSlideChange("prev");
-		}
+		onSlideChange?.("prev");
 		prev();
 	}, [onSlideChange, prev]);
 
 	const handlerNext = useCallback(() => {
-		if (onSlideChange) {
-			onSlideChange("next");
-		}
+		onSlideChange?.("next");
 		next();
 	}, [onSlideChange, next]);
 
@@ -78,11 +80,11 @@ export default function Slider({
 		const handleKeyDown = (ev: KeyboardEvent) => {
 			switch (ev.key) {
 				case "ArrowLeft":
-					if (current === 0) break;
+					if (currentIndex === 0) break;
 					handlerPrev();
 					break;
 				case "ArrowRight":
-					if (current === total - 1) break;
+					if (currentIndex === total - 1) break;
 					handlerNext();
 					break;
 			}
@@ -93,7 +95,7 @@ export default function Slider({
 		return () => {
 			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [handlerNext, handlerPrev, current, total]);
+	}, [handlerNext, handlerPrev, currentIndex, total, setCurrentIndex]);
 
 	return (
 		<div
@@ -108,12 +110,12 @@ export default function Slider({
 						type="button"
 						onClick={handlerPrev}
 						aria-label="Previous Slide"
-						disabled={current === 0}
+						disabled={currentIndex === 0}
 						className="cursor-pointer disabled:cursor-auto"
 					>
 						<div
 							className={`w-0 h-0 border-y-[8px] border-y-transparent border-r-[12px] ${
-								current === 0 ? "border-r-gray-400" : "border-r-black"
+								currentIndex === 0 ? "border-r-gray-400" : "border-r-black"
 							}`}
 						></div>
 					</button>
@@ -126,7 +128,7 @@ export default function Slider({
 				>
 					<div
 						className="flex transition-transform duration-500 ease-in-out"
-						style={{ transform: `translateX(-${current * 100}%)` }}
+						style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 					>
 						{slides.map((slide, index) => (
 							<div
@@ -135,7 +137,7 @@ export default function Slider({
 									aspectRatio && aspectRatio
 								}`}
 								aria-label={`Slide ${index + 1} de ${total}: ${slide.alt}`}
-								aria-hidden={index == current}
+								aria-hidden={index == currentIndex}
 							>
 								<Image
 									src={slide.src}
@@ -145,8 +147,8 @@ export default function Slider({
 									className={`object-cover cursor-pointer ${classNameImage}`}
 									onMouseEnter={pause}
 									onMouseLeave={resume}
-									onClick={() => onClick && onClick(slide.src, slide.alt)}
-									priority={initialIndex === 0}
+									onClick={() => onClickImage && onClickImage(currentIndex)}
+									priority={!!initialIndex}
 								/>
 								{slide.caption && (
 									<p
@@ -170,11 +172,11 @@ export default function Slider({
 								<button
 									key={slide.id}
 									role="tab"
-									aria-selected={index === current}
+									aria-selected={index === currentIndex}
 									aria-label={`Go to slide ${index + 1}`}
-									onClick={() => setCurrent(index)}
+									onClick={() => setCurrentIndex(index)}
 									className={`h-2 rounded-full transition-all ${
-										index === current
+										index === currentIndex
 											? "w-5 bg-white"
 											: "w-2 bg-white/50 hover:bg-white/80"
 									}`}
@@ -188,12 +190,14 @@ export default function Slider({
 						type="button"
 						onClick={handlerNext}
 						aria-label="Next Slide"
-						disabled={current === total - 1}
+						disabled={currentIndex === total - 1}
 						className="cursor-pointer disabled:cursor-auto"
 					>
 						<div
 							className={`w-0 h-0 border-y-[8px] border-y-transparent border-l-[12px] ${
-								current === total - 1 ? "border-l-gray-400" : "border-l-black"
+								currentIndex === total - 1
+									? "border-l-gray-400"
+									: "border-l-black"
 							}`}
 						></div>
 					</button>

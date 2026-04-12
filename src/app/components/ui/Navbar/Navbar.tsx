@@ -32,15 +32,15 @@ export default function Navbar({ children }: TNavBar) {
 	return (
 		<>
 			<div className="navbar flex flex-row justify-between w-full p-6 md:p-10 items-center relative top-0 right-0 left-0">
-				<h2 className="text-[20px] sm:text-[22px]">
+				<h2 className="text-[20px] sm:text-[22px] font-bold">
 					<Link href={"/"}>{logo("title")}</Link>
 				</h2>
-				<ul className="hidden lg:flex gap-4 lg:text-lg">
+				<ul className="group hidden lg:flex gap-4 lg:text-lg">
 					{navLinks.map(({ name, href }) => (
 						<Link
 							key={name}
 							href={href}
-							className={isActive(href) ? "font-bold" : ""}
+							className={`transition-all duration-300 hover:!text-black hover:font-bold group-hover:text-gray-400 ${isActive(href) ? "font-bold" : ""} `}
 						>
 							{text(`${name}`)}
 						</Link>
@@ -66,7 +66,7 @@ export default function Navbar({ children }: TNavBar) {
 				</button>
 			</div>
 			<ul
-				className={`w-full text-[20px] flex flex-col gap-4 p-6 absolute lg:hidden overflow-hidden border-x-0 border-black bg-white z-10 ${
+				className={`group w-full text-[20px] flex flex-col gap-4 p-6 absolute lg:hidden overflow-hidden border-x-0 border-black bg-white z-10 ${
 					isOpen
 						? "h-[70lvh] min-h-fit opacity-100 border-y-1 pointer-events-auto"
 						: "h-0 opacity-0 border-y-0 pointer-events-none"
