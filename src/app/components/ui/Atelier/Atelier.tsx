@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useLenguage } from "@/src/app/contexts/LenguageProvider";
 import { useMounted } from "@/src/app/hooks/useMounted";
 import { members } from "@/src/Projects_data/Members";
 import Accordion from "../Accordion/Accordion";
@@ -15,6 +16,7 @@ export default function Atelier() {
 	const founderAnimateEntrance = mounted
 		? "animate-slide-in-left"
 		: "opacity-0";
+	const lenguage = useLenguage();
 
 	return (
 		<>
@@ -58,16 +60,18 @@ export default function Atelier() {
 					Founders
 				</h2>
 				<Accordion>
-					{members.map(({ name, src, alt, textContent }, index) => (
-						<Accordion.Item
-							key={name}
-							name={name}
-							src={src}
-							alt={alt}
-							textContent={textContent}
-							delay={String(0.15 + index * 0.08) + "s"}
-						/>
-					))}
+					{members.map(
+						({ name, src, alt, textContentEn, textContentEs }, index) => (
+							<Accordion.Item
+								key={name}
+								name={name}
+								src={src}
+								alt={alt}
+								textContent={lenguage === "en" ? textContentEn : textContentEs}
+								delay={String(0.15 + index * 0.08) + "s"}
+							/>
+						),
+					)}
 				</Accordion>
 			</div>
 		</>

@@ -43,6 +43,7 @@ function Item({ alt, name, src, textContent, delay }: PropsItem) {
 	const isOpen = activeItem === name;
 	const mounted = useMounted();
 	const entranceAnimation = mounted ? "animate-slide-in-right" : "opacity-0";
+	const paragraphs = textContent.split("\n");
 
 	return (
 		<>
@@ -63,17 +64,19 @@ function Item({ alt, name, src, textContent, delay }: PropsItem) {
 			>
 				<div className="overflow-hidden">
 					<div className="flex flex-col flex-col-reverse sm:flex-row mt-4 sm:mt-0 gap-8 pb-4">
-						<div className="content-details text-justify w-full sm:w-[45%] max-w-[425px] max-sm:self-center">
-							<p className="leading-relaxed">{textContent}</p>
+						<div className="content-details text-justify flex flex-col justify-between gap-4 w-full sm:w-[45%] max-w-[480px] max-sm:self-center">
+							{paragraphs.map((p, i) => (
+								<p key={i} dangerouslySetInnerHTML={{ __html: p }}></p>
+							))}
 						</div>
 
-						<div className="relative max-sm:mx-auto aspect-[3/4] w-full sm:w-[45%] max-w-[300px] h-[400px] overflow-hidden">
+						<div className="relative max-sm:mx-auto aspect-[3/4] w-full sm:w-[45%] max-w-[400px] overflow-hidden">
 							<Image
 								fill
 								src={src}
 								alt={alt}
 								className="object-cover"
-								sizes="(max-width: 640px) 100vw, 300px"
+								sizes="(max-width: 640px) 100vw, 400px"
 								priority={name === "Primer Item"}
 							/>
 						</div>

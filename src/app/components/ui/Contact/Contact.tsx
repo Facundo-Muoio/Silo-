@@ -6,7 +6,7 @@ import { useMounted } from "@/src/app/hooks/useMounted";
 export default function Contact() {
 	const t = useTranslations("Contact");
 	const m = useMessages();
-	const email = t("gmail");
+	const email = t("mail");
 	const linkedin = t("linkedin");
 	const mounted = useMounted();
 	const instagram = m.Contact.instagram;
@@ -68,7 +68,7 @@ export default function Contact() {
 				<div className="container_linkedin">
 					<a
 						className="text-gray-600 transition-all duration-150 hover:text-black hover:[text-shadow:_0_0_1px_rgb(0_0_0)]"
-						href="https://www.linkedin.com/"
+						href="https://www.linkedin.com/company/siloviz/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
