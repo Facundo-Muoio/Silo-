@@ -46,7 +46,7 @@ export default function Footer() {
 					<li>
 						<Link
 							target="_blank"
-							href="https://linkedin.com/"
+							href="https://www.linkedin.com/company/siloviz/"
 							className="hover:font-bold transition-all duration-150"
 						>
 							{text("linkedin")}
